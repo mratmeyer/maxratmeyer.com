@@ -1,0 +1,14 @@
+---
+title: Archives
+layout: base
+permalink: blog/index.html
+description: Archives from Max Ratmeyer's Blog
+---
+{%- for post in collections.posts | reverse -%}
+    <div class="article-header article-preview-header">
+        <p class="date">{{ post.data.date | dateformat }}</p>
+        <p class="title">
+            <a class="title" href="{{ post.url | url }}">{{ post.data.title }}</a>
+        </p>
+    </div>
+{%- endfor -%}

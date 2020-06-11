@@ -1,0 +1,24 @@
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{ renderData.title or title or metadata.title }}</title>
+    <meta name="description" content="{{ renderData.description or description or metadata.description }}"/>
+
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//static.maxratmeyer.com">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/inter-ui/3.13.1/inter.min.css" integrity="sha256-LzC9oVXOrJHMkvI5Ju8G9pw043i4DSTVG3NMYPWubHY=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+    {% set css %}
+    {% include "style.css" %}
+    {% endset %}
+    
+    <style>
+        {{css | cssmin | safe}}
+    </style>
+
+    {% set absoluteUrl %}{{ page.url | url }}{% endset %}
+    <link rel="canonical" href="https://maxratmeyer.com{{ absoluteUrl }}"/>
+    
+</head>

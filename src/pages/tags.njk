@@ -1,0 +1,24 @@
+---
+renderData:
+  title: Tagged “{{ tag }}”
+layout: base
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - posts
+permalink: /tags/{{ tag }}/
+---
+<h1 class="title">Tagged "{{ tag }}"</h1>
+
+{% set taglist = collections[ tag ] %}
+{% for post in taglist | reverse %}
+  <div class="article-header article-preview-header">
+      <p class="date">{{ post.data.date | dateformat }}</p>
+      <p class="title">
+      <a class="title" href="{{ post.url | url }}">{{ post.data.title }}</a>
+    </p>
+  </div>
+{% endfor %}

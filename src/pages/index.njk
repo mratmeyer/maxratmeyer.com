@@ -1,0 +1,34 @@
+---
+title: Max Ratmeyer
+layout: base
+permalink: index.html
+description: Max Ratmeyer's Blog - a high schooler's perspective on technology.
+---
+
+<div class="main">
+    <h1 class="hero">Max Ratmeyer's Blog</h1>
+    <p class="posthero">A high schooler's perspective on technology</p>
+
+    <div class="socialIcons">
+        <a href="https://www.linkedin.com/in/maxratmeyer" class="fa fa-linkedin icon-home"></a>
+        <a href="https://github.com/maxratmeyer" class="fa fa-github icon-home"></a>
+        <a href="https://www.twitter.com/maxratmeyer/" class="fa fa-twitter icon-home"></a>
+        <a href="/feed.xml" class="fa fa-rss icon-home"></a>
+    </div>
+</div>
+<div class="row">
+    {%- for post in collections.posts | reverse -%}
+        <div class="article-header article-preview-header">
+            <p class="date">{{ post.data.date | dateformat }}</p>
+            <p class="title">
+                <a class="title" href="{{ post.url | url }}">{{ post.data.title }}</a>
+            </p>
+        </div>
+        <div class="article article-preview">
+            {% excerpt post %}
+        </div>
+        <div class="read-more-container">
+            <a class="read-more" href="{{ post.url | url }}">Read More ➔</a>
+        </div>
+    {%- endfor -%}
+ </div>

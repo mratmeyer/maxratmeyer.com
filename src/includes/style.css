@@ -10,10 +10,10 @@ div.content-container {
     padding: 2rem;
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 45em) {
     div.content-container {
         margin: auto;
-        width: 960px;
+        width: 45em;
     }
 }
 
@@ -232,7 +232,7 @@ div.content-container {
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 45em) {
     .hero {
         font-size: 60px;
     }

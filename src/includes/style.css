@@ -40,6 +40,12 @@ div.content-container {
     .link-title {
         color: white !important;
     }
+    .hero {
+        color: white !important;
+    }
+    .posthero {
+        color: white !important;
+    }
     .fa {
         color: white !important;
     }
@@ -51,6 +57,9 @@ div.content-container {
     }
     .icon-bar {
         background-color: white !important;
+    }
+    .date {
+        color: white !important;
     }
     .article a {
         color: white !important;
@@ -88,9 +97,11 @@ div.content-container {
 
 .nav-link {
     text-decoration: none;
-    color: black;
+    color: #333333;
     font-weight: 600;
     padding: 2vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 
 .nav-link:hover {
@@ -144,7 +155,7 @@ div.content-container {
 .icon-bar {
 	width: 22px; 
 	height: 2px;
-	background-color: black;
+	background-color: #212121;
 	display: block;
 	transition: all 0.2s;
 	margin-top: 4px
@@ -189,12 +200,14 @@ div.content-container {
     font-size: 80px;
     font-weight: 700;
     text-align: center;
+    color: #1c1c1c;
 }
 
 .posthero {
     font-size: 40px;
     font-weight: 600;
     text-align: center;
+    color: #292929;
 }
 
 .socialIcons {
@@ -206,7 +219,7 @@ div.content-container {
     width: 70px;
     text-align: center;
     text-decoration: none !important;
-    color: black;
+    color: #292929;
 }
   
 .icon-home:hover {
@@ -220,7 +233,7 @@ div.content-container {
 .read-more {
     font-size: 20px;
     text-decoration: none;
-    color: black;
+    color: #292929;
     font-weight: bold;
 }
 
@@ -247,7 +260,7 @@ div.content-container {
     margin: 0;
     font-weight: 700;
     text-decoration: none;
-    color: black;
+    color: #292929;
 }
 
 .title a:hover {
@@ -257,6 +270,7 @@ div.content-container {
 .date {
     font-size: 25px;
     font-weight: 600;
+    color: #333333;
 }
 
 .article p {
@@ -265,7 +279,7 @@ div.content-container {
 }
 
 .article a {
-    color: black;
+    color: #212121;
 }
 
 .article a:hover {
@@ -276,6 +290,7 @@ div.content-container {
     font-size: 35px;
     font-weight: bold;
     margin-top: 50px;
+    color: #333333;
 }
 
 .article img {
@@ -309,7 +324,7 @@ div.content-container {
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
-    color: black;
+    color: #333333;
 }
 
 .related-header {
@@ -339,9 +354,14 @@ div.footer {
 .footer p {
     font-size: 20px;
     text-align: center;
+    color: #333333;
 }
 
 .footer-link {
     text-decoration: none;
-    color: black;
+    color: #333333;
+}
+
+.footer-link:hover {
+    opacity: 0.7;
 }

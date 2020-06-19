@@ -49,6 +49,9 @@ div.content-container {
     .fa {
         color: white !important;
     }
+    .footer p {
+        color: white !important;
+    }
     .footer-link {
         color: white !important;
     }

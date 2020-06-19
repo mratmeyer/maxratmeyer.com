@@ -204,6 +204,7 @@ div.content-container {
     font-weight: 700;
     text-align: center;
     color: #1c1c1c;
+    margin-bottom: 20px;
 }
 
 .posthero {
@@ -211,6 +212,7 @@ div.content-container {
     font-weight: 600;
     text-align: center;
     color: #292929;
+    margin-top: 20px;
 }
 
 .socialIcons {
@@ -251,6 +253,15 @@ div.content-container {
 @media only screen and (max-width: 45em) {
     .hero {
         font-size: 60px;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    .main {
+        width: 100vw;
+        position: relative;
+        margin-left: -50vw;
+        left: 50%;
     }
 }
 

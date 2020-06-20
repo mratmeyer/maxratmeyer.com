@@ -22,15 +22,15 @@ In order to measure the performance of the assets worldwide, I used [KeyCDN's Pe
 
 The first test I ran was an uncached request from CloudFlare directly to Amazon S3.
 
-![Performance test with Worker fetching straight from S3.](https://static.maxratmeyer.com/media/workers-fetch-origin.jpg "Performance test with Worker fetching straight from S3.")
+![Performance test with Worker fetching straight from S3.](https://assets.maxratmeyer.com/media/workers-fetch-origin.jpg "Performance test with Worker fetching straight from S3.")
 
 When we fetch the files directly from Amazon, you can see in the TTFB that generally speaking in the United States, the content gets transfered quickly but in almost every other place in the world, it takes anywhere from half a second to 1.5 seconds in order to start delivering content. This is because my Amazon S3 bucket is located only in us-east-1, Amazon's North Virginia location. Any other region has to go through the internet before it is delivered to the user.
 
-![Performance test with Worker fetching from Workers KV](https://static.maxratmeyer.com/media/workers-fetch-kv.jpg "Performance test with Worker fetching from Workers KV")
+![Performance test with Worker fetching from Workers KV](https://assets.maxratmeyer.com/media/workers-fetch-kv.jpg "Performance test with Worker fetching from Workers KV")
 
 Here you can see with Workers KV deployed, the first request in Germany has a long TTFB with about 800ms, but almost all of the sequential requests are around the 200-300ms mark. This is because after the first Worker fetches the asset from S3 in Germany, it not only caches it locally at CloudFlare's Germany colocation, but it also uploads the file to Workers KV, which then pushes it to all of CloudFlare's data centers worldwide. When the sequential requests are sent, instead of being fetched from the origin, they are being fetched from Workers KV, so the latency is reduced significantly.
 
-![Performance test with Worker fetching from node cache](https://static.maxratmeyer.com/media/workers-fetch-node.jpg "Performance test with Worker fetching from node cache")
+![Performance test with Worker fetching from node cache](https://assets.maxratmeyer.com/media/workers-fetch-node.jpg "Performance test with Worker fetching from node cache")
 
 Here, you can see once the image has been cached not only on Workers KV but also on the local CloudFlare servers, the TTFB is halved yet again. This is super fast, but if the files aren't used regularly by users, it will revert back to the speeds from fetching directly from Workers KV, which is still pretty fast.
 
@@ -42,11 +42,11 @@ There are two ways to set this up, you can either copy and paste the code below 
 
 Next, you need to assign the KV Namespace binding. At the top of the screen, click KV, and create a new namespace. Once you've done that, go back to the Worker's settings, and create a binding for the variables 'ASSETS' to whatever KV space name you just created. Once you're done, your Settings page should look like this.
 
-![Example Workers Settings Page](https://static.maxratmeyer.com/media/workers-settings.jpg "Example Workers Settings Page")
+![Example Workers Settings Page](https://assets.maxratmeyer.com/media/workers-settings.jpg "Example Workers Settings Page")
 
 Once you've set it up, all you need to do is go into your domain's settings and assign the Workers to a route. For example, mine looks like this.
 
-![Example Workers Domain Settings Page](https://static.maxratmeyer.com/media/workers-domain-settings.jpg "Example Workers Domain Settings Page")
+![Example Workers Domain Settings Page](https://assets.maxratmeyer.com/media/workers-domain-settings.jpg "Example Workers Domain Settings Page")
 
 ## Conclusion
 

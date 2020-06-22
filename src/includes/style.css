@@ -67,6 +67,9 @@ div.content-container {
     .article a {
         color: white !important;
     }
+    .article h2 {
+        color: white !important;
+    }
     .read-more {
         color: white !important;
     }

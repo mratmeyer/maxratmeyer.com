@@ -1,7 +1,7 @@
 {
   "name": "maxratmeyer-web",
   "version": "2.0.0",
-  "description": "Personal website built with Bootstrap and 11ty",
+  "description": "Personal website built with 11ty",
   "scripts": {
     "build": "eleventy",
     "watch": "eleventy --watch",

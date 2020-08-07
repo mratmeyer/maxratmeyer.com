@@ -73,6 +73,9 @@ div.content-container {
     .read-more {
         color: white !important;
     }
+    .go-to-archives {
+        color: white !important;
+    }
 }
 
 /*
@@ -250,6 +253,22 @@ div.content-container {
 }
 
 .read-more:hover {
+    text-decoration: underline;
+}
+
+.go-to-archives {
+    font-size: 20px;
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+}
+
+.go-to-archives-container {
+    text-align: right;
+    padding-top: 40px;
+}
+
+.go-to-archives:hover {
     text-decoration: underline;
 }
 

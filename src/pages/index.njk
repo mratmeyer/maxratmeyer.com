@@ -18,17 +18,22 @@ description: Max Ratmeyer's Blog - a high schooler's perspective on technology.
 </div>
 <div class="row">
     {%- for post in collections.posts | reverse -%}
-        <div class="article-header article-preview-header">
-            <p class="date">{{ post.data.date | dateformat }}</p>
-            <p class="title">
-                <a class="title" href="{{ post.url | url }}">{{ post.data.title }}</a>
-            </p>
-        </div>
-        <div class="article article-preview">
-            {% excerpt post %}
-        </div>
-        <div class="read-more-container">
-            <a class="read-more" href="{{ post.url | url }}">Read More ➔</a>
-        </div>
+        {% if loop.index0 < 6 %}    
+            <div class="article-header article-preview-header">
+                <p class="date">{{ post.data.date | dateformat }}</p>
+                <p class="title">
+                    <a class="title" href="{{ post.url | url }}">{{ post.data.title }}</a>
+                </p>
+            </div>
+            <div class="article article-preview">
+                {% excerpt post %}
+            </div>
+            <div class="read-more-container">
+                <a class="read-more" href="{{ post.url | url }}">Read More ➔</a>
+            </div>
+        {% endif %}
     {%- endfor -%}
+    <div class="go-to-archives-container">
+        <a class="go-to-archives" href="/blog/">Go to Archives ➔</a>
+    </div>
  </div>

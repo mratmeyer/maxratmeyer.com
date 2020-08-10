@@ -307,11 +307,13 @@ div.content-container {
     font-size: 25px;
     font-weight: 600;
     color: #333333;
+    line-height: 50%;
 }
 
 .article p {
     font-size: 20px;
     line-height: 2;
+    color: #292929;
 }
 
 .article a {
@@ -341,6 +343,10 @@ div.content-container {
 
 .article-preview-header {
     padding-top: 15px;
+}
+
+.article-archives-header {
+    padding-bottom: 15px;
 }
 
 /*
@@ -378,6 +384,31 @@ div.content-container {
 /*
     Tags
 */
+
+.tag-container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.tag {
+    border-radius: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #292929;
+    margin-right: 10px;
+}
+
+.tag-link {
+    text-decoration: none;
+}
+
+.tags {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    line-height: 20%;
+}
 
 /*
     Footer

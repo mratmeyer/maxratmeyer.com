@@ -5,8 +5,19 @@ permalink: blog/index.html
 description: Archives from Max Ratmeyer's Blog
 ---
 {%- for post in collections.posts | reverse -%}
-    <div class="article-header article-preview-header">
+    <div class="article-header article-preview-header article-archives-header">
         <p class="date">{{ post.data.date | dateformat }}</p>
+        <div class="tag-container">
+            {%- for tag in post.data.tags -%}
+                {% if (tag != "posts") %}    
+                    <div class="tag">
+                        <a class="tag-link" href="/tags/{{ tag }}">
+                            <p class="tags">{{ tag }}</p>
+                        </a>
+                    </div>
+                {% endif %}
+            {%- endfor -%}
+        </div>
         <p class="title">
             <a class="title" href="{{ post.url | url }}">{{ post.data.title }}</a>
         </p>

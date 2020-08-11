@@ -5,6 +5,7 @@ date: 2020-06-08
 description: "How I set up CloudFlare Workers to cache Amazon S3 files on CloudFlare Workers KV."
 tags:
   - guides
+  - projects
 ---
 When I was building this blog, one of the decisions I had to make was where to host my media. One of the options is to just upload everything to my GitHub repository and deploy it along with the site, but that wouldn't be efficient because Git isn't built to handle tons of media. I also wanted to manage my media and photos separately from my GitHub website repository, so I went with Amazon S3, Amazon's object storage service.
 

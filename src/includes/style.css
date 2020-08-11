@@ -357,12 +357,12 @@ div.content-container {
 */
 
 .grid-post {
-    border: .5px solid;
+    border: none;
     margin: .5rem;
     border-radius: 15px;
-    border-color: gray;
     padding-left: 15px;
     padding-right: 15px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 .link-title {
@@ -381,6 +381,13 @@ div.content-container {
     .related-posts-container {
         display: grid;
         grid-template-columns: auto auto auto;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .grid-post {
+        padding-top: 1px;
+        padding-bottom: 1px;
     }
 }
 

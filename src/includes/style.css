@@ -64,6 +64,9 @@ div.content-container {
     .date {
         color: white !important;
     }
+    .article p {
+        color: white !important;
+    }
     .article a {
         color: white !important;
     }

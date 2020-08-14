@@ -1,36 +1,18 @@
 ---
-renderData:
-  title: Tagged “{{ tag }}”
+title: Tags
 layout: base
-pagination:
-  data: collections
-  size: 1
-  alias: tag
-  filter:
-    - all
-    - posts
-permalink: /tags/{{ tag }}/
-eleventyExcludeFromCollections: true
+permalink: tags/
+description: Post Tags
 ---
-<h1 class="title">Tagged "{{ tag }}"</h1>
-
-{% set taglist = collections[ tag ] %}
-{% for post in taglist | reverse %}
-  <div class="article-header article-preview-header">
-      <p class="date">{{ post.data.date | dateformat }}</p>
-      <div class="tag-container">
-        {%- for tag in post.data.tags -%}
-          {% if (tag != "posts") %}    
-            <div class="tag">
-              <a class="tag-link" href="/tags/{{ tag }}">
-                <p class="tags">{{ tag }}</p>
-              </a>
-            </div>
-          {% endif %}
-        {%- endfor -%}
+<h1 class="title">Tags</h1>
+<div class="tag-list">
+  {%- for tag in collections.tags | reverse -%}
+    <div class="tag-container">
+      <div class="tag">
+        <a class="tag-link" href="/tags/{{ tag }}">
+          <p class="tags">{{ tag }}</p>
+        </a>
       </div>
-      <p class="title">
-      <a class="title" href="{{ post.url | url }}">{{ post.data.title }}</a>
-    </p>
-  </div>
-{% endfor %}
+    </div>
+  {%- endfor -%}
+</div>

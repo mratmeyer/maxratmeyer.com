@@ -36,6 +36,30 @@ module.exports = function(eleventyConfig) {
         return content;
     });
 
+    eleventyConfig.addCollection("tags", function(collection) {
+        let tagSet = new Set();
+        collection.getAll().forEach(function(item) {
+            if( "tags" in item.data ) {
+            let tags = item.data.tags;
+
+            tags = tags.filter(function(item) {
+                switch(item) {
+                case "posts":
+                    return false;
+                }
+
+                return true;
+            });
+
+            for (const tag of tags) {
+                tagSet.add(tag);
+            }
+        }
+    });
+    
+    return [...tagSet];
+    });
+
     eleventyConfig.addPassthroughCopy("src/favicon.ico");
     eleventyConfig.addPassthroughCopy("src/robots.txt");
     eleventyConfig.addPassthroughCopy("src/assets/");

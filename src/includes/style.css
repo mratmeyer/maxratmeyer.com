@@ -395,6 +395,10 @@ div.content-container {
     Tags
 */
 
+.tag-list {
+    margin-top: 20px;
+}
+
 .tag-container {
     display: flex;
     margin-bottom: 10px;

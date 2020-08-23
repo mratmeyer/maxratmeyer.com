@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /about/index.html
+permalink: /about/
 description: About Max Ratmeyer
 ---
 

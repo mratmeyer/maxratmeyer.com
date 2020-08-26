@@ -316,7 +316,7 @@ div.content-container {
 .article p {
     font-size: 20px;
     line-height: 2;
-    color: #292929;
+    color: #383838;
 }
 
 .article a {
@@ -435,12 +435,12 @@ div.footer {
 .footer p {
     font-size: 20px;
     text-align: center;
-    color: #333333;
+    color: #484848;
 }
 
 .footer-link {
     text-decoration: none;
-    color: #333333;
+    color: #484848;
 }
 
 .footer-link:hover {

@@ -1,0 +1,17 @@
+<div class ="related-articles">
+  <p class="related-header">Check out my latest posts</p>
+  <div class="related-posts-container">
+    {%- for post in collections.posts | reverse %}
+      {% if loop.index0 < 5 %}
+        <div class="grid-post">
+            <p class="archive-item">
+                <a class="link-title" href="{{ post.url | url }}">
+                    {{ post.data.title }}
+                </a>
+            </p>
+            <p>{{ post.data.description }}</p>
+        </div>
+      {% endif %}
+    {%- endfor %}
+  </div>
+</div>

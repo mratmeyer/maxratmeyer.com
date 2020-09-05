@@ -315,6 +315,7 @@ div.content-container {
     font-weight: 700;
     text-decoration: none;
     color: #292929;
+    clear: both;
 }
 
 .title a:hover {
@@ -326,6 +327,7 @@ div.content-container {
     font-weight: 600;
     color: #333333;
     line-height: 50%;
+    float: left;
 }
 
 .article p {
@@ -360,7 +362,7 @@ div.content-container {
 }
 
 .article-preview-header {
-    padding-top: 15px;
+    padding-top: 30px;
 }
 
 .article-archives-header {
@@ -437,6 +439,23 @@ div.content-container {
     font-weight: 600;
     color: white;
     line-height: 20%;
+}
+
+@media only screen and (max-width: 520px) {
+    .tag-container {
+        clear: both;
+    }
+}
+
+@media only screen and (min-width: 520px) {
+    .tag {
+        position: relative;
+        top: 10px;
+    }
+    .tag-container {
+        margin-left: 15px;
+        float: left;
+    }
 }
 
 /*

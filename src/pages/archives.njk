@@ -4,6 +4,7 @@ layout: base
 permalink: /blog/
 description: Archives from Max Ratmeyer's Blog
 ---
+<h1 class="page-title">{{ title }}</h1>
 {%- for post in collections.posts | reverse -%}
     <div class="article-header article-preview-header article-archives-header">
         <p class="date">{{ post.data.date | dateformat }}</p>

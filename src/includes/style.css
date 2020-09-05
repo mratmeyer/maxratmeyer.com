@@ -37,6 +37,9 @@ div.content-container {
     .title {
         color: white !important;
     }
+    .page-title {
+        color: white !important;
+    }
     .link-title {
         color: white !important;
     }
@@ -288,6 +291,18 @@ div.content-container {
         margin-left: -50vw;
         left: 50%;
     }
+}
+
+/*
+    Pages
+*/
+
+.page-title {
+    font-size: 70px;
+    margin: 0;
+    font-weight: 700;
+    text-decoration: none;
+    color: #292929;
 }
 
 /*

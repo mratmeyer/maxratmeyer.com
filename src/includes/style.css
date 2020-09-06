@@ -135,9 +135,9 @@ div.content-container {
         z-index: 2;
         background-color: white;
         flex-direction: column;
-        border: .5px solid;
+        border: none;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
         border-radius: 15px;
-        border-color: gray;
         padding: 30px;
         padding-top: 50px;
     }

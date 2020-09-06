@@ -1,21 +1,21 @@
 <nav>
-  <button class="nav-button collapsed" id="nav-button" type="button" onclick="toggleNavbar()" aria-label="Navigation Button">
+  <button class="nav-button collapsed" id="nav-button" type="button" onclick="toggleNavbar()" aria-label="Navigation Button" data-turbolinks-permanent>
     <span class="icon-bar top-bar"></span>
     <span class="icon-bar middle-bar"></span>
     <span class="icon-bar bottom-bar"></span>				
   </button>
-  <ul class="nav-list" id="overlay">
+  <ul class="nav-list" id="overlay" data-turbolinks-permanent>
     <a href="/">
       <img src="/assets/profiles/max-200.jpg" loading="lazy" class="portrait" alt="Max Ratmeyer"/>
     </a>
     <li class="nav-item"> 
-      <a href="/" class="nav-link">Home</a>
+      <a href="/" class="nav-link" onclick="resetNavbar()">Home</a>
     </li>
     <li class="nav-item">
-       <a href="/blog/" class="nav-link">Archives</a>
+       <a href="/blog/" class="nav-link" onclick="resetNavbar()">Archives</a>
     </li>
     <li class="nav-item">
-       <a href="/about/" class="nav-link">About</a>
+       <a href="/about/" class="nav-link" onclick="resetNavbar()">About</a>
     </li>
   </ul>
 </nav>
@@ -32,6 +32,14 @@
       button.classList.remove('collapsed');
       collapsed = false;
       document.getElementById("overlay").style.display = "block";
+    }
+  }
+
+  function resetNavbar() { 
+    if (!collapsed) {
+      button.classList.add('collapsed');
+      collapsed = true;
+      document.getElementById("overlay").style.display = "none";
     }
   }
 </script>

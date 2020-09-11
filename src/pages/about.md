@@ -17,7 +17,7 @@ If you have any questions, comments, or feedback, feel free to reach out to me a
 
 **Hosting**: [Linode](https://www.linode.com/) and [Cloudflare](https://www.cloudflare.com/)
 
-**Version Control**: [GitHub](https://github.com/MaxRatmeyer/maxratmeyer-web/)
+**Version Control**: [GitHub](https://github.com/MaxRatmeyer/maxratmeyer.com/)
 
 **Text Editor**: [VSCodium](https://vscodium.com/)
 

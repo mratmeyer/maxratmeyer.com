@@ -1,5 +1,5 @@
 {
-  "name": "maxratmeyer-web",
+  "name": "maxratmeyer.com",
   "version": "2.0.0",
   "description": "Personal website built with 11ty",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/MaxRatmeyer/maxratmeyer-web.git"
+    "url": "git://github.com/MaxRatmeyer/maxratmeyer.com.git"
   },
   "author": "Max Ratmeyer",
   "devDependencies": {

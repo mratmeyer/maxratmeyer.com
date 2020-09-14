@@ -2,7 +2,7 @@
 layout: post
 title: "VPNs are overrated"
 date: 2020-04-19
-description: "One piece of cybersecurity advice that comes up time and time again is to use a VPN. VPNs are touted as an all in one tool to secure yourself online, but the reality is a lot more complicated."
+description: "VPNs are touted as an all in one tool to secure yourself online, but the reality is a lot more complicated."
 tags:
   - opinions
 ---

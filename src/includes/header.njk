@@ -1,7 +1,12 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>{{ renderData.title or title or metadata.title }}</title>
+
+    {% if title == "Max Ratmeyer's Blog" %}
+        <title>{{ renderData.title or title or metadata.title }}</title>
+    {% else %}
+        <title>{{ renderData.title or title or metadata.title }} - Max Ratmeyer's Blog</title>
+    {% endif %}
     <meta name="description" content="{{ renderData.description or description or metadata.description }}"/>
 
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>

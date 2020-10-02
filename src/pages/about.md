@@ -15,10 +15,10 @@ If you have any questions, comments, or feedback, feel free to reach out to me a
 
 **Static Site Generator**: [Eleventy](https://www.11ty.dev/)
 
-**Hosting**: [Linode](https://www.linode.com/) and [Cloudflare](https://www.cloudflare.com/)
+**Hosting**: [Workers Sites](https://workers.cloudflare.com/sites/)
 
 **Version Control**: [GitHub](https://github.com/MaxRatmeyer/maxratmeyer.com/)
 
-**Text Editor**: [VSCodium](https://vscodium.com/)
+**Text Editor**: [VS Code](https://code.visualstudio.com/)
 
 For more information about my setup, check out my [blog post on setting up my blog](/blog/building-my-new-blog/).

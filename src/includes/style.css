@@ -89,25 +89,24 @@ div.content-container {
 */
 
 .nav-list {
+    display: flex;
     margin: 0;
     padding: 0;
     padding-top: 50px;
-    padding-bottom: 40px;
-    display: flex;
+    padding-bottom: 50px;
 }
 
 .nav-item {
-    list-style-type: none;
     margin: 0 .5rem;
     font-size: 25px;
-    padding-top: 37.5px;
+    padding-top: 30px;
+    list-style-type: none;
 }
 
 .nav-link {
     text-decoration: none;
     color: #333333;
     font-weight: 600;
-    padding: 2vw;
     padding-left: 1vw;
     padding-right: 1vw;
 }
@@ -320,6 +319,7 @@ div.content-container {
 .page-title {
     font-size: 70px;
     margin: 0;
+    margin-top: 20px;
     font-weight: 700;
     text-decoration: none;
     color: #292929;
@@ -379,6 +379,10 @@ div.content-container {
     max-height: 750px;
     margin-top: 7%;
     margin-bottom: 7%;
+}
+
+.article-full-header {
+    margin-top: 20px;
 }
 
 .article-preview-header {

@@ -103,13 +103,6 @@ div.content-container {
     padding-top: 37.5px;
 }
 
-.portrait {
-    border-radius: 50%;
-    width: 100px;
-    list-style-type: none;
-    margin: 0 2vw;
-}
-
 .nav-link {
     text-decoration: none;
     color: #333333;
@@ -158,9 +151,6 @@ div.content-container {
         cursor: pointer;
 
         align-self: flex-start;
-    }
-    .portrait {
-        display: none;
     }
     #overlay {
         display: none;
@@ -211,10 +201,20 @@ div.content-container {
     Homepage
 */
 
+.hero-line {
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.portrait {
+    border-radius: 50%;
+    width: 100px;
+}
+
 .hero {
+    margin-top: 5px;
     font-size: 80px;
     font-weight: 700;
-    text-align: center;
     color: #1c1c1c;
     margin-bottom: 20px;
 }
@@ -224,7 +224,7 @@ div.content-container {
     font-weight: 600;
     text-align: center;
     color: #292929;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .socialIcons {
@@ -285,11 +285,32 @@ div.content-container {
 }
 
 @media only screen and (min-width: 960px) {
+    .hero-line {
+        display: flex;
+    }
+
+    .hero {
+        margin-left: 25px;
+    }
+
     .main {
         width: 100vw;
         position: relative;
         margin-left: -50vw;
         left: 50%;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .portrait {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 125px;
+    }
+    .hero {
+        text-align: center;
+        margin-top: 20px;
     }
 }
 

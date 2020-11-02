@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /assets/
 
-Sitemap: https://maxratmeyer.com/sitemap.xml
+Sitemap: https://www.maxratmeyer.com/sitemap.xml

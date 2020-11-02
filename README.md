@@ -2,4 +2,4 @@
 
 Personal website built with 11ty.
 
-Live at https://maxratmeyer.com/.
+Live at https://www.maxratmeyer.com/.

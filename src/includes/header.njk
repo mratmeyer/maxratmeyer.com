@@ -9,10 +9,8 @@
     {% endif %}
     <meta name="description" content="{{ renderData.description or description or metadata.description }}"/>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="preconnect" href="//static.maxratmeyer.com/" crossorigin>
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
 
@@ -27,7 +25,7 @@
     {% set absoluteUrl %}{{ page.url | url }}{% endset %}
     <link rel="canonical" href="https://maxratmeyer.com{{ absoluteUrl }}"/>
 
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ static.prefix }}icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ static.prefix }}icons/favicon-16x16.png">
     
 </head>

@@ -10,9 +10,10 @@
     <meta name="description" content="{{ renderData.description or description or metadata.description }}"/>
 
     <link rel="preconnect" href="//static.maxratmeyer.com/" crossorigin>
-    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+    {% if title == "Max Ratmeyer's Blog" %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+    {% endif %}
 
     {% set css %}
     {% include "style.css" %}

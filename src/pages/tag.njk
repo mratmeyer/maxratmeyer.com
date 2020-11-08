@@ -22,7 +22,7 @@ eleventyExcludeFromCollections: true
         {%- for tag in post.data.tags -%}
           {% if (tag != "posts") %}    
             <div class="tag">
-              <a class="tag-link" href="/tags/{{ tag }}">
+              <a class="tag-link" href="/tags/{{ tag }}/">
                 <p class="tags">{{ tag }}</p>
               </a>
             </div>

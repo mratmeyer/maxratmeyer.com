@@ -8,7 +8,8 @@ description: A high schooler's perspective on technology.
 <div class="main">
     <div class = "hero-line">
         <div class = "portrait-container">
-            <img src="{{ static.prefix }}profiles/max-200.jpg" loading="lazy" class="portrait" alt="Max Ratmeyer"/>
+            {# <img src="{{ static.prefix }}profiles/max-200.jpg" loading="lazy" class="portrait" alt=""/> #}
+            {% Image "./src/assets/profiles/max-200.jpg", "Max Ratmeyer", "portrait" %}
         </div>
         <h1 class="hero">Max Ratmeyer's Blog</h1>
     </div>

@@ -1,6 +1,7 @@
 const CleanCSS = require("clean-css");
 const excerpt = require('eleventy-plugin-excerpt');
 const htmlmin = require("html-minifier");
+const Image = require("@11ty/eleventy-img");
 const moment = require('moment-timezone');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
@@ -58,6 +59,43 @@ module.exports = function(eleventyConfig) {
     });
     
     return [...tagSet];
+    });
+
+    eleventyConfig.addNunjucksAsyncShortcode("Image", async (src, alt, classes) => {
+        if (!alt) {
+          throw new Error(`Missing \`alt\` on myImage from: ${src}`);
+        }
+    
+        let stats = await Image(src, {
+          widths: [null],
+          formats: ["jpeg", "webp"],
+          urlPath: "/images/",
+          outputDir: "./_site/images/",
+        });
+    
+        let lowestSrc = stats["jpeg"][0];
+    
+        const srcset = Object.keys(stats).reduce(
+          (acc, format) => ({
+            ...acc,
+            [format]: stats[format].reduce(
+              (_acc, curr) => `${_acc} ${curr.srcset} ,`,
+              ""
+            ),
+          }),
+          {}
+        );
+    
+        const source = `<source type="image/webp" srcset="${srcset["webp"]}" >`;
+    
+        const img = `<img
+          loading="lazy"
+          class="${classes}"
+          alt="${alt}"
+          src="${lowestSrc.url}"
+          srcset="${srcset["jpeg"]}">`;
+    
+        return `<picture> ${source} ${img} </picture>`;
     });
 
     eleventyConfig.addPassthroughCopy("src/favicon.ico");

@@ -295,7 +295,7 @@ div.content-container {
     .main {
         width: 100vw;
         position: relative;
-        margin-left: -50vw;
+        margin-left: -51vw;
         left: 50%;
     }
 }

@@ -3,17 +3,7 @@ layout: base
 ---
 <div class="article-header article-full-header">
     <p class="date">{{ page.date | dateformat }}</p>
-    <div class="tag-container">
-        {%- for tag in tags -%}
-            {% if (tag != "posts") %}    
-                <div class="tag">
-                    <a class="tag-link" href="/tags/{{ tag }}/">
-                        <p class="tags">{{ tag }}</p>
-                    </a>
-                </div>
-            {% endif %}
-        {%- endfor -%}
-    </div>
+    {% include "post-tags.njk" %}
     <h1 class="title">{{ title }}</h1>
 </div>
 

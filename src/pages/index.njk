@@ -8,7 +8,6 @@ description: A high schooler's perspective on technology.
 <div class="main">
     <div class = "hero-line">
         <div class = "portrait-container">
-            {# <img src="{{ static.prefix }}profiles/max-200.jpg" loading="lazy" class="portrait" alt=""/> #}
             {% Image "./src/assets/profiles/max-200.jpg", "Max Ratmeyer", "portrait" %}
         </div>
         <h1 class="hero">Max Ratmeyer's Blog</h1>
@@ -26,17 +25,7 @@ description: A high schooler's perspective on technology.
         {% if loop.index0 < 6 %}    
             <div class="article-header article-preview-header">
                 <p class="date">{{ post.data.date | dateformat }}</p>
-                <div class="tag-container">
-                    {%- for tag in post.data.tags -%}
-                        {% if (tag != "posts") %}    
-                            <div class="tag">
-                                <a class="tag-link" href="/tags/{{ tag }}/">
-                                    <p class="tags">{{ tag }}</p>
-                                </a>
-                            </div>
-                        {% endif %}
-                    {%- endfor -%}
-                </div>
+                {% include "post-tags.njk" %}
                 <p class="title">
                     <a class="title" href="{{ post.url | url }}">{{ post.data.title }}</a>
                 </p>

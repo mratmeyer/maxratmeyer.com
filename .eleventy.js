@@ -69,8 +69,8 @@ module.exports = function(eleventyConfig) {
         let stats = await Image(src, {
           widths: [null],
           formats: ["jpeg", "webp"],
-          urlPath: "/images/",
-          outputDir: "./_site/images/",
+          urlPath: "/assets/optimized/",
+          outputDir: "./_site/assets/optimized/",
         });
     
         let lowestSrc = stats["jpeg"][0];

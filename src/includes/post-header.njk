@@ -1,0 +1,7 @@
+<div class="article-header">
+    <p class="date">{{ post.data.date | dateformat }}</p>
+    {% include "post-tags.njk" %}
+    <p class="title">
+        <a class="title" href="{{ post.url | url }}">{{ post.data.title }}</a>
+    </p>
+</div>

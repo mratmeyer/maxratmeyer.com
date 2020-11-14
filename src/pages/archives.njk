@@ -4,13 +4,10 @@ layout: base
 permalink: /blog/
 description: Archives from Max Ratmeyer's Blog
 ---
-<h1 class="page-title">{{ title }}</h1>
+<div class="article-header">
+    <h1 class="page-title">{{ title }}</h1>
+</div>
+
 {%- for post in collections.posts | reverse -%}
-    <div class="article-header article-preview-header article-archives-header">
-        <p class="date">{{ post.data.date | dateformat }}</p>
-        {% include "post-tags.njk" %}
-        <p class="title">
-            <a class="title" href="{{ post.url | url }}">{{ post.data.title }}</a>
-        </p>
-    </div>
+    {% include "post-header.njk" %}
 {%- endfor -%}

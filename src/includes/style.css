@@ -67,13 +67,13 @@ div.content-container {
     .date {
         color: white !important;
     }
-    .article p {
+    .article-content p {
         color: white !important;
     }
-    .article a {
+    .article-content a {
         color: white !important;
     }
-    .article h2 {
+    .article-content h2 {
         color: white !important;
     }
     .read-more {
@@ -140,15 +140,11 @@ div.content-container {
         display: block;
         position: absolute;
         z-index: 3;
-        
         padding: 2vw;
         font-size: 3vh;
         border: none;
-        
         outline: none;
-        
         cursor: pointer;
-
         align-self: flex-start;
     }
     #overlay {
@@ -211,19 +207,19 @@ div.content-container {
 }
 
 .hero {
-    margin-top: 5px;
+    margin-top: 6px;
+    margin-bottom: 20px;
     font-size: 80px;
     font-weight: 700;
     color: #1c1c1c;
-    margin-bottom: 20px;
 }
 
 .posthero {
+    margin-top: 5px;
     font-size: 40px;
-    font-weight: 600;
     text-align: center;
+    font-weight: 600;
     color: #292929;
-    margin-top: 10px;
 }
 
 .socialIcons {
@@ -277,12 +273,6 @@ div.content-container {
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 45em) {
-    .hero {
-        font-size: 60px;
-    }
-}
-
 @media only screen and (min-width: 960px) {
     .hero-line {
         display: flex;
@@ -309,6 +299,7 @@ div.content-container {
     .hero {
         text-align: center;
         margin-top: 20px;
+        font-size: 60px;
     }
 }
 
@@ -350,28 +341,28 @@ div.content-container {
     float: left;
 }
 
-.article p {
+.article-content p {
     font-size: 20px;
     line-height: 2;
     color: #383838;
 }
 
-.article a {
+.article-content a {
     color: #212121;
 }
 
-.article a:hover {
+.article-content a:hover {
     opacity: 0.7;
 }
 
-.article h2 {
+.article-content h2 {
     font-size: 35px;
     font-weight: bold;
     margin-top: 50px;
     color: #333333;
 }
 
-.article img {
+.article-content img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -381,16 +372,8 @@ div.content-container {
     margin-bottom: 7%;
 }
 
-.article-full-header {
-    margin-top: 20px;
-}
-
-.article-preview-header {
-    padding-top: 30px;
-}
-
-.article-archives-header {
-    padding-bottom: 15px;
+.article-header {
+    margin-top: 25px;
 }
 
 /*
@@ -478,6 +461,7 @@ div.content-container {
     }
     .tag-container {
         margin-left: 15px;
+        margin-bottom: 40px;
         float: left;
     }
 }
@@ -487,6 +471,7 @@ div.content-container {
 */
 div.footer {
     margin: auto;
+    clear: both;
     padding-bottom: 20px;
 }
 

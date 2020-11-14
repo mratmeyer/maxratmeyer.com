@@ -23,14 +23,8 @@ description: A high schooler's perspective on technology.
 <div class="row">
     {%- for post in collections.posts | reverse -%}
         {% if loop.index0 < 6 %}    
-            <div class="article-header article-preview-header">
-                <p class="date">{{ post.data.date | dateformat }}</p>
-                {% include "post-tags.njk" %}
-                <p class="title">
-                    <a class="title" href="{{ post.url | url }}">{{ post.data.title }}</a>
-                </p>
-            </div>
-            <div class="article article-preview">
+            {% include "post-header.njk" %}
+            <div class="article-content">
                 {% excerpt post %}
             </div>
             <div class="read-more-container">
@@ -41,4 +35,4 @@ description: A high schooler's perspective on technology.
     <div class="go-to-archives-container">
         <a class="go-to-archives" href="/blog/">Go to Archives ➔</a>
     </div>
- </div>
+</div>

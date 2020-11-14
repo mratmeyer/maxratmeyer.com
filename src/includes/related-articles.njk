@@ -2,7 +2,7 @@
   <p class="related-header">Latest posts:</p>
   <div class="related-posts-container">
     {%- for post in collections.posts | reverse %}
-      {% if loop.index0 < 4 %}
+      {% if loop.index0 < 6 %}
         <div class="grid-post">
             <p class="archive-item">
                 <a class="link-title" href="{{ post.url | url }}">

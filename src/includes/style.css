@@ -304,6 +304,7 @@ div.content-container {
 */
 
 .title {
+    padding-top: 7px;
     font-size: 50px;
     margin: 0;
     font-weight: 700;
@@ -444,7 +445,6 @@ div.content-container {
     }
     .tag-container {
         margin-left: 15px;
-        margin-bottom: 40px;
         float: left;
     }
 }

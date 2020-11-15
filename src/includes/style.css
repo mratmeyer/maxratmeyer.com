@@ -196,26 +196,17 @@ div.content-container {
     Homepage
 */
 
-.hero-line {
-    margin-top: 40px;
-    justify-content: center;
-}
-
-.portrait {
-    border-radius: 50%;
-    width: 100px;
-}
-
 .hero {
-    margin-top: 6px;
+    margin-top: 20px;
     margin-bottom: 20px;
     font-size: 80px;
+    text-align: center;
     font-weight: 700;
     color: #1c1c1c;
 }
 
 .posthero {
-    margin-top: 5px;
+    margin-top: 10px;
     font-size: 40px;
     text-align: center;
     font-weight: 600;
@@ -274,18 +265,10 @@ div.content-container {
 }
 
 @media only screen and (min-width: 960px) {
-    .hero-line {
-        display: flex;
-    }
-
-    .hero {
-        margin-left: 25px;
-    }
-
     .main {
         width: 100vw;
         position: relative;
-        margin-left: -51vw;
+        margin-left: -50vw;
         left: 50%;
     }
 }

@@ -4,6 +4,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
 }
 
 div.content-container {
@@ -268,8 +269,7 @@ div.content-container {
     .main {
         width: 100vw;
         position: relative;
-        margin-left: -50vw;
-        left: 50%;
+        margin-left: calc(-50vw + 50%);
     }
 }
 

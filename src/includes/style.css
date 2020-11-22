@@ -50,8 +50,8 @@ div.content-container {
     .posthero {
         color: white !important;
     }
-    .fa {
-        color: white !important;
+    .icon-home {
+        fill: white !important;
     }
     .footer p {
         color: white !important;
@@ -219,11 +219,13 @@ div.content-container {
 }
 
 .icon-home {
-    font-size: 50px;
-    width: 70px;
-    text-align: center;
-    text-decoration: none !important;
-    color: #292929;
+    width: 50px;
+    fill: #292929;
+}
+
+.center-icon {
+    margin-left: 20px;
+    margin-right: 20px;
 }
   
 .icon-home:hover {

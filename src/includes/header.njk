@@ -9,8 +9,7 @@
     {% endif %}
     <meta name="description" content="{{ renderData.description or description or metadata.description }}"/>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="{{ static.prefix }}fonts/inter-v2-latin-400-600-700.woff2" as="font" type="font/woff2" crossorigin>
 
     {% set css %}
     {% include "style.css" %}

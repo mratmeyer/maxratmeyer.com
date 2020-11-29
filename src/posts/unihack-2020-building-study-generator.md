@@ -30,7 +30,7 @@ We also added a feature where if a user wants to print their flashcards to go, t
 
 The frontend of our application, which in this case was the website studygenerator.com, was built in Vue.js as a single page app and hosted on Netlify. The backend was built in Node.js using the Express framework. This was then dockerized and hosted in Google Cloud Run. 
 
-Going into this project, neither of us had any experience working with Vue or web development in general. We came from working in the backend and the Java world, so jumping into the JavaScript library world was a little annoying. Many times we ran into issues where something wouldn't work due to quirks in the language or framework. We also ran into issues with JavaScript being very inconsistent. Sometimes, the app would work and sometimes it wouldn't
+Going into this project, neither of us had any experience working with Vue or web development in general. We came from working in the backend and the Java world, so jumping into the JavaScript library world was a little annoying. Many times we ran into issues where something wouldn't work due to quirks in the language or framework. We also ran into issues with JavaScript being very inconsistent. Sometimes, the app would work and sometimes it wouldn't.
 
 ## Next steps
 

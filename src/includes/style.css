@@ -7,81 +7,20 @@ body {
     overflow-x: hidden;
 }
 
-div.content-container {
+.content-container {
     padding: 2rem;
 }
 
 @media only screen and (min-width: 45em) {
-    div.content-container {
+    .content-container {
         margin: auto;
         width: 45em;
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
     .page-content {
-        margin-top: 110px;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #121212;
-        color: white;
-    }
-    .nav-link {
-        color: white !important;
-    }
-    .nav-button {
-        background-color: #121212;
-    }
-    .title {
-        color: white !important;
-    }
-    .page-title {
-        color: white !important;
-    }
-    .link-title {
-        color: white !important;
-    }
-    .hero {
-        color: white !important;
-    }
-    .posthero {
-        color: white !important;
-    }
-    .icon-home {
-        fill: white !important;
-    }
-    .footer p {
-        color: white !important;
-    }
-    .footer-link {
-        color: white !important;
-    }
-    .nav-list {
-        background-color: #121212 !important;
-    }
-    .icon-bar {
-        background-color: white !important;
-    }
-    .date {
-        color: white !important;
-    }
-    .article-content p {
-        color: white !important;
-    }
-    .article-content a {
-        color: white !important;
-    }
-    .article-content h2 {
-        color: white !important;
-    }
-    .read-more {
-        color: white !important;
-    }
-    .go-to-archives {
-        color: white !important;
+        margin-top: 100px;
     }
 }
 
@@ -120,7 +59,7 @@ div.content-container {
     display: none;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
     .nav-list {
         position: absolute;
         top: 10px;
@@ -198,8 +137,7 @@ div.content-container {
 */
 
 .hero {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0px 20px 0px;
     font-size: 80px;
     text-align: center;
     font-weight: 700;
@@ -207,33 +145,34 @@ div.content-container {
 }
 
 .posthero {
-    margin-top: 10px;
+    margin: 20px 0px 20px 0px;
     font-size: 40px;
     text-align: center;
     font-weight: 600;
     color: #292929;
 }
 
-.socialIcons {
+.icons {
+    margin: 40px 0px 20px 0px;
     text-align: center;
 }
 
-.icon-home {
+.icon {
     width: 50px;
     fill: #292929;
+    margin: 0px 15px 0px 15px;
 }
 
-.center-icon {
-    margin-left: 20px;
-    margin-right: 20px;
-}
-  
-.icon-home:hover {
+.icon:hover {
     opacity: 0.7;
 }
 
-.main {
-    margin-bottom: 60px;
+.post-excerpt {
+    margin: 0px 0px 40px 0px;
+}
+
+.post-excerpts {
+    margin: 70px 0px 20px 0px;
 }
 
 .read-more {
@@ -243,12 +182,13 @@ div.content-container {
     font-weight: bold;
 }
 
-.read-more-container {
-    text-align: center;
-}
-
 .read-more:hover {
     text-decoration: underline;
+}
+
+.read-more-container {
+    margin: 20px 0px 20px 0px;
+    text-align: center;
 }
 
 .go-to-archives {
@@ -259,8 +199,8 @@ div.content-container {
 }
 
 .go-to-archives-container {
+    margin: 40px 0px 0px 0px;
     text-align: right;
-    padding-top: 40px;
 }
 
 .go-to-archives:hover {
@@ -268,7 +208,7 @@ div.content-container {
 }
 
 @media only screen and (min-width: 960px) {
-    .main {
+    .hero-content {
         width: 100vw;
         position: relative;
         margin-left: calc(-50vw + 50%);
@@ -276,14 +216,8 @@ div.content-container {
 }
 
 @media only screen and (max-width: 960px) {
-    .portrait {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
     .hero {
         text-align: center;
-        margin-top: 20px;
         font-size: 60px;
     }
 }
@@ -294,28 +228,33 @@ div.content-container {
 
 .page-title {
     font-size: 70px;
-    margin: 0;
-    margin-top: 20px;
+    margin: 20px 0px 10px 0px;
     font-weight: 700;
     text-decoration: none;
     color: #292929;
 }
 
 /*
+    Archives Page
+*/
+.archive-item {
+    margin: 0px 0px 20px 0px;
+}
+
+/*
     Articles
 */
 
-.title {
-    padding-top: 7px;
+.article-title {
     font-size: 50px;
-    margin: 0;
+    margin: 0px 0px 0px 0px;
     font-weight: 700;
     text-decoration: none;
     color: #292929;
     clear: both;
 }
 
-.title a:hover {
+.article-title a:hover {
     opacity: 0.7;
 }
 
@@ -328,6 +267,7 @@ div.content-container {
 }
 
 .article-content p {
+    margin: 10px 0px 10px 0px;
     font-size: 20px;
     line-height: 2;
     color: #383838;
@@ -358,47 +298,29 @@ div.content-container {
     margin-bottom: 7%;
 }
 
-.article-header {
-    margin-top: 25px;
-}
-
 /*
     Related Articles
 */
 
-.grid-post {
-    border: none;
-    margin: .5rem;
-    border-radius: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+.related-articles-header {
+    font-size: 50px;
+    font-weight: bold;
+    color: #333333;
 }
 
-.link-title {
-    font-size: 20px;
+.related-articles-item {
+    margin: 30px 0px 30px 0px;
+}
+
+.related-articles-link {
+    font-size: 25px;
     font-weight: bold;
     text-decoration: none;
     color: #333333;
 }
 
-.related-header {
-    font-size: 35px;
-    font-weight: 600;
-}
-
-@media only screen and (min-width: 700px) {
-    .related-posts-container {
-        display: grid;
-        grid-template-columns: auto auto auto;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    .grid-post {
-        padding-top: 1px;
-        padding-bottom: 1px;
-    }
+.related-articles-description {
+    font-size: 18px;
 }
 
 /*
@@ -454,10 +376,9 @@ div.content-container {
 /*
     Footer
 */
-div.footer {
-    margin: auto;
+.footer {
+    margin: 20px 0px 60px 0px;
     clear: both;
-    padding-bottom: 20px;
 }
 
 .footer p {

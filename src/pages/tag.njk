@@ -12,7 +12,7 @@ pagination:
 permalink: /tags/{{ tag }}/
 eleventyExcludeFromCollections: true
 ---
-<h1 class="title">Tagged "{{ tag }}"</h1>
+<h1 class="page-title">Tagged "{{ tag }}"</h1>
 
 {% set taglist = collections[ tag ] %}
 {% for post in taglist | reverse %}

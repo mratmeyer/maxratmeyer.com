@@ -1,17 +1,13 @@
 <div class ="related-articles">
-  <p class="related-header">Latest posts:</p>
-  <div class="related-posts-container">
-    {%- for post in collections.posts | reverse %}
-      {% if loop.index0 < 6 %}
-        <div class="grid-post">
-            <p class="archive-item">
-                <a class="link-title" href="{{ post.url | url }}">
-                    {{ post.data.title }}
-                </a>
-            </p>
-            <p>{{ post.data.description }}</p>
-        </div>
-      {% endif %}
-    {%- endfor %}
-  </div>
+  <p class="related-articles-header">Latest posts:</p>
+  {%- for post in collections.posts | reverse %}
+    {% if loop.index0 < 4 %}
+      <div class="related-articles-item">
+        <a class="related-articles-link" href="{{ post.url | url }}">
+            {{ post.data.title }}
+        </a>
+        <p class = "related-articles-description">{{ post.data.description }}</p>
+      </div>
+    {% endif %}
+  {%- endfor %}
 </div>

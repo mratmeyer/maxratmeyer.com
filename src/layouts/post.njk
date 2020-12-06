@@ -1,11 +1,7 @@
 ---
 layout: base
 ---
-<div class="article-header">
-    <p class="date">{{ page.date | dateformat }}</p>
-    {% include "post-tags.njk" %}
-    <h1 class="title">{{ title }}</h1>
-</div>
+{% include "post-header.njk" %}
 
 <div class="article-content">
     {{ content | safe }}

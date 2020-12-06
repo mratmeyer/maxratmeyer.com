@@ -16,13 +16,13 @@
     {% endset %}
     
     <style>
-        {{css | cssmin | safe}}
+        {{ css | cssmin | safe }}
     </style>
 
     {% set absoluteUrl %}{{ page.url | url }}{% endset %}
     <link rel="canonical" href="https://www.maxratmeyer.com{{ absoluteUrl }}"/>
 
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ static.prefix }}icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ static.prefix }}icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ static.prefix }}icons/favicon-32x32.png">
     
 </head>

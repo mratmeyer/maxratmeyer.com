@@ -1,5 +1,12 @@
 # maxratmeyer.com
 
-Personal website built with 11ty.
+Personal blog built on Eleventy.
 
-Live at https://www.maxratmeyer.com/.
+## Installation and Building
+To install the required dependencies, run `npm install`.
+
+To build the site, run `npm run build`.
+
+To serve a local copy, run `npm run serve`.
+
+View site live at [maxratmeyer.com](https://www.maxratmeyer.com/).

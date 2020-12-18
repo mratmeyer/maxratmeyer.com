@@ -405,8 +405,8 @@ body {
     font-weight: 400;
     font-display: swap;
     src: local(''),
-         url('{{ static.prefix }}fonts/inter-v2-latin-400-600-700.woff2') format('woff2'),
-         url('{{ static.prefix }}fonts/inter-v2-latin-400-600-700.woff') format('woff');
+         url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff2') format('woff2'),
+         url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff') format('woff');
 }
   
   @font-face {
@@ -415,8 +415,8 @@ body {
     font-weight: 600;
     font-display: swap;
     src: local(''),
-         url('{{ static.prefix }}fonts/inter-v2-latin-400-600-700.woff2') format('woff2'),
-         url('{{ static.prefix }}fonts/inter-v2-latin-400-600-700.woff') format('woff');
+         url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff2') format('woff2'),
+         url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff') format('woff');
 }
   
   @font-face {
@@ -425,7 +425,7 @@ body {
     font-weight: 700;
     font-display: swap;
     src: local(''),
-         url('{{ static.prefix }}fonts/inter-v2-latin-400-600-700.woff2') format('woff2'),
-         url('{{ static.prefix }}fonts/inter-v2-latin-400-600-700.woff') format('woff');
+         url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff2') format('woff2'),
+         url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff') format('woff');
 }
   

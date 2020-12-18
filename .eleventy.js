@@ -4,6 +4,7 @@ const htmlmin = require("html-minifier");
 const Image = require("@11ty/eleventy-img");
 const moment = require('moment-timezone');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const assets = require("./src/data/assets");
 
 module.exports = function(eleventyConfig) {
 
@@ -69,7 +70,7 @@ module.exports = function(eleventyConfig) {
       let stats = await Image(src, {
         widths: [1440],
         formats: ["jpeg", "webp"],
-        urlPath: "/assets/optimized/",
+        urlPath: assets.path + "optimized/",
         outputDir: "./_site/assets/optimized/",
       });
   

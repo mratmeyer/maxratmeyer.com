@@ -3,7 +3,7 @@
 Personal blog built on Eleventy.
 
 ## Installation and Building
-To install the required dependencies, run `npm install`.
+To install the required dependencies, run `npm ci`.
 
 To build the site, run `npm run build`.
 

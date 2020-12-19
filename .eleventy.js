@@ -70,7 +70,7 @@ module.exports = function(eleventyConfig) {
       let stats = await Image(src, {
         widths: [1440],
         formats: ["jpeg", "webp"],
-        urlPath: assets.path + "optimized/",
+        urlPath: "ASSETS_PATH" + "optimized/",
         outputDir: "./_site/assets/optimized/",
       });
   
@@ -87,15 +87,15 @@ module.exports = function(eleventyConfig) {
         {}
       );
   
-      const source = `<source type="image/webp" srcset="${srcset["webp"]}" >`;
+      const source = `<source type="image/webp" srcset="${srcset["webp"]}" >`.replace('ASSETS_PATH', assets.path);
   
       const img = `<img
         loading="lazy"
         alt="${alt}"
         src="${lowestSrc.url}"
-        srcset="${srcset["jpeg"]}">`;
+        srcset="${srcset["jpeg"]}">`.replace('ASSETS_PATH', assets.path);
   
-      return `<picture> ${source} ${img} </picture>`;
+      return `<picture> ${source} ${img} </picture>`.replace('ASSETS_PATH', assets.path);
     });
 
     eleventyConfig.addPassthroughCopy("src/favicon.ico");

@@ -1,7 +1,7 @@
 {
   "name": "maxratmeyer.com",
   "version": "2.5.0",
-  "description": "Personal website built with 11ty",
+  "description": "Personal blog built on Eleventy.",
   "scripts": {
     "build": "eleventy",
     "watch": "eleventy --watch",

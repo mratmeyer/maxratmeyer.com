@@ -63,6 +63,8 @@ module.exports = function(eleventyConfig) {
     });
 
     eleventyConfig.addNunjucksAsyncShortcode("Image", async (src, alt) => {
+      src = "./src/assets/media/" + src; // Append the location of the media directory
+
       if (!alt) {
         throw new Error(`Missing \`alt\` on Image from: ${src}`);
       }
@@ -70,8 +72,8 @@ module.exports = function(eleventyConfig) {
       let stats = await Image(src, {
         widths: [1440],
         formats: ["jpeg", "webp"],
-        urlPath: "ASSETS_PATH" + "optimized/",
-        outputDir: "./_site/assets/optimized/",
+        urlPath: "ASSETS_PATH" + "images/",
+        outputDir: "./_site/assets/images/",
       });
   
       let lowestSrc = stats["jpeg"][0];

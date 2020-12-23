@@ -3,12 +3,13 @@
 */
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
     overflow-x: hidden;
 }
 
-.content-container {
-    padding: 2rem;
+.page-content {
+    color: #303030;
+    font-size: 20px;
 }
 
 @media only screen and (min-width: 45em) {
@@ -19,8 +20,18 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+    .content-container {
+        padding: 1rem;
+    }
+    
     .page-content {
         margin-top: 100px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .content-container {
+        margin-top: 20px;
     }
 }
 
@@ -37,6 +48,7 @@ body {
 }
 
 .nav-item {
+    font-family: 'Inter', sans-serif;
     margin: 0 .5rem;
     font-size: 25px;
     padding-top: 30px;
@@ -45,7 +57,7 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #333333;
+    color: #383838;
     font-weight: 600;
     padding-left: 1vw;
     padding-right: 1vw;
@@ -77,6 +89,7 @@ body {
       margin: 0;
     }
     .nav-button {
+        margin: 1rem 0 0 1rem;
         display: block;
         position: absolute;
         z-index: 3;
@@ -95,9 +108,9 @@ body {
 .icon-bar {
 	width: 22px; 
 	height: 2px;
-	background-color: #212121;
+	background-color: black;
 	display: block;
-	transition: all 0.2s;
+	transition: all 0.15s;
 	margin-top: 4px
 }
  
@@ -137,73 +150,77 @@ body {
 */
 
 .hero {
+    font-family: 'Inter', sans-serif;
+    color: #202020;
     margin: 20px 0px 20px 0px;
-    font-size: 80px;
+    font-size: 85px;
     text-align: center;
     font-weight: 700;
-    color: #1c1c1c;
 }
 
 .posthero {
+    font-family: 'Inter', sans-serif;
+    color: #383838;
     margin: 20px 0px 20px 0px;
-    font-size: 40px;
+    font-size: 35px;
     text-align: center;
     font-weight: 600;
-    color: #292929;
 }
 
-.icons {
+.social-icons {
     margin: 40px 0px 20px 0px;
     text-align: center;
 }
 
-.icon {
+.social-icon {
+    fill: #383838;
     width: 50px;
-    fill: #292929;
     margin: 0px 15px 0px 15px;
 }
 
-.icon:hover {
+.social-icon:hover {
     opacity: 0.7;
-}
-
-.post-excerpt {
-    margin: 0px 0px 40px 0px;
 }
 
 .post-excerpts {
     margin: 70px 0px 20px 0px;
 }
 
+.post-excerpt {
+    margin: 0px 0px 40px 0px;
+}
+
 .read-more {
-    font-size: 20px;
-    text-decoration: none;
-    color: #292929;
-    font-weight: bold;
-}
-
-.read-more:hover {
-    text-decoration: underline;
-}
-
-.read-more-container {
+    font-family: 'Inter', sans-serif;
     margin: 20px 0px 20px 0px;
     text-align: center;
 }
 
-.go-to-archives {
-    font-size: 20px;
+.read-more a {
+    font-size: 25px;
+    color: #383838;
     text-decoration: none;
-    color: #333333;
     font-weight: bold;
 }
 
-.go-to-archives-container {
+.read-more a:hover {
+    text-decoration: underline;
+}
+
+.go-to-archives {
+    font-family: 'Inter', sans-serif;
     margin: 40px 0px 0px 0px;
     text-align: right;
 }
 
-.go-to-archives:hover {
+.go-to-archives a {
+    font-size: 25px;
+    color: #383838;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.go-to-archives a:hover {
     text-decoration: underline;
 }
 
@@ -217,8 +234,10 @@ body {
 
 @media only screen and (max-width: 960px) {
     .hero {
-        text-align: center;
-        font-size: 60px;
+        font-size: 55px;
+    }
+    .posthero {
+        font-size: 30px;
     }
 }
 
@@ -227,11 +246,12 @@ body {
 */
 
 .page-title {
+    font-family: 'Inter', sans-serif;
+    color: #202020;
     font-size: 70px;
     margin: 20px 0px 10px 0px;
     font-weight: 700;
     text-decoration: none;
-    color: #292929;
 }
 
 /*
@@ -246,11 +266,13 @@ body {
 */
 
 .article-title {
+    font-family: 'Inter', sans-serif;
+    color: #202020;
     font-size: 50px;
     margin: 0px 0px 0px 0px;
+    padding: 5px 0px 5px 0px;
     font-weight: 700;
     text-decoration: none;
-    color: #292929;
     clear: both;
 }
 
@@ -259,22 +281,21 @@ body {
 }
 
 .date {
+    font-family: 'Inter', sans-serif;
+    color: #202020;
     font-size: 25px;
     font-weight: 600;
-    color: #333333;
     line-height: 50%;
     float: left;
 }
 
 .article-content p {
     margin: 10px 0px 10px 0px;
-    font-size: 20px;
     line-height: 2;
-    color: #383838;
 }
 
 .article-content a {
-    color: #212121;
+    color: #383838;
 }
 
 .article-content a:hover {
@@ -282,10 +303,10 @@ body {
 }
 
 .article-content h2 {
+    font-family: 'Inter', sans-serif;
     font-size: 35px;
     font-weight: bold;
     margin-top: 50px;
-    color: #333333;
 }
 
 .article-content img {
@@ -303,24 +324,27 @@ body {
 */
 
 .related-articles-header {
+    font-family: 'Inter', sans-serif;
     font-size: 50px;
     font-weight: bold;
-    color: #333333;
+    margin: 50px 0px 20px 0px;
 }
 
 .related-articles-item {
-    margin: 30px 0px 30px 0px;
+    margin: 20px 0px 20px 0px;
 }
 
-.related-articles-link {
+.related-articles-item a {
+    font-family: 'Inter', sans-serif;
+    color: #383838;
     font-size: 25px;
     font-weight: bold;
     text-decoration: none;
-    color: #333333;
 }
 
-.related-articles-description {
+.related-articles-item p {
     font-size: 18px;
+    margin: 10px 0px 0px 0px;
 }
 
 /*
@@ -340,8 +364,10 @@ body {
     border-radius: 30px;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: #292929;
+    background-color: #383838;
     margin-right: 10px;
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .tag-link {
@@ -349,6 +375,7 @@ body {
 }
 
 .tags {
+    font-family: 'Inter', sans-serif;
     text-transform: uppercase;
     font-size: 20px;
     font-weight: 600;
@@ -377,23 +404,30 @@ body {
     Footer
 */
 .footer {
-    margin: 20px 0px 60px 0px;
+    margin: 30px 0px 60px 0px;
     clear: both;
 }
 
 .footer p {
-    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
     text-align: center;
-    color: #484848;
 }
 
-.footer-link {
+.footer a {
     text-decoration: none;
-    color: #484848;
+    color: #383838;
 }
 
-.footer-link:hover {
+.footer a:hover {
     opacity: 0.7;
+}
+
+@media only screen and (min-width: 960px) {
+    .footer {
+        margin-top: 60px;
+    }
 }
 
 /*

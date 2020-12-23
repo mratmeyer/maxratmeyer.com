@@ -1,16 +1,17 @@
+const assets = require("./src/data/assets");
 const CleanCSS = require("clean-css");
 const excerpt = require('eleventy-plugin-excerpt');
 const htmlmin = require("html-minifier");
 const Image = require("@11ty/eleventy-img");
 const moment = require('moment-timezone');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const assets = require("./src/data/assets");
 
 module.exports = function(eleventyConfig) {
 
     eleventyConfig.setDataDeepMerge(true);
 
     eleventyConfig.addPlugin(excerpt);
+    eleventyConfig.addPlugin(pluginRss);
 
     eleventyConfig.addFilter("dateformat", function(dateIn) {
         return moment(dateIn).tz('GMT').format('MMM DD, YYYY');
@@ -19,94 +20,86 @@ module.exports = function(eleventyConfig) {
         return moment(dateIn).tz('GMT').format('YYYY-MM-DD');
     });
 
-    eleventyConfig.addPlugin(pluginRss);
-
-    eleventyConfig.addFilter("cssmin", function(code) {
-        return new CleanCSS({}).minify(code).styles;
-    });
-
+    // Minify HTML
     eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-        if( outputPath.endsWith(".html") ) {
-          let minified = htmlmin.minify(content, {
-            useShortDoctype: true,
-            removeComments: true,
-            collapseWhitespace: true
-          });
-          return minified;
-        }
-    
-        return content;
+      if(outputPath.endsWith(".html") ) {
+        let minified = htmlmin.minify(content, {
+          useShortDoctype: true,
+          removeComments: true,
+          collapseWhitespace: true
+        });
+
+        return minified;
+      }
+      return content;
     });
 
+    // Minify CSS
+    eleventyConfig.addFilter("cssmin", function(code) {
+      return new CleanCSS({}).minify(code).styles;
+    });
+
+    // Set up tags collection
     eleventyConfig.addCollection("tags", function(collection) {
-        let tagSet = new Set();
-        collection.getAll().forEach(function(item) {
-            if( "tags" in item.data ) {
-            let tags = item.data.tags;
+      let tagSet = new Set();
 
-            tags = tags.filter(function(item) {
-                switch(item) {
-                case "posts":
-                    return false;
-                }
+      collection.getAll().forEach(function(item) {
+        if("tags" in item.data) {
+          let tags = item.data.tags;
 
-                return true;
-            });
-
-            for (const tag of tags) {
-                tagSet.add(tag);
+          tags = tags.filter(function(item) {
+            switch(item) {
+            case "posts":
+                return false;
             }
+
+            return true;
+          });
+
+          for (const tag of tags) {
+            tagSet.add(tag);
+          }
         }
-    });
+      });
     
-    return [...tagSet];
+      return [...tagSet];
     });
 
-    eleventyConfig.addNunjucksAsyncShortcode("Image", async (src, alt) => {
+    // Add 'Image' shortcode
+    eleventyConfig.addNunjucksAsyncShortcode("Image", async function(src, alt) {
       src = "./src/assets/media/" + src; // Append the location of the media directory
 
-      if (!alt) {
+      if(alt === undefined) {
         throw new Error(`Missing \`alt\` on Image from: ${src}`);
       }
   
-      let stats = await Image(src, {
+      let metadata = await Image(src, {
         widths: [1440],
-        formats: ["jpeg", "webp"],
-        urlPath: "ASSETS_PATH" + "images/",
-        outputDir: "./_site/assets/images/",
+        formats: ['webp', 'jpeg'],
+        urlPath: assets.path + "media/",
+        outputDir: "./_site/assets/media/",
       });
   
-      let lowestSrc = stats["jpeg"][0];
+      let lowsrc = metadata.jpeg[0];
   
-      const srcset = Object.keys(stats).reduce(
-        (acc, format) => ({
-          ...acc,
-          [format]: stats[format].reduce(
-            (_acc, curr) => `${_acc} ${curr.srcset} ,`,
-            ""
-          ),
-        }),
-        {}
-      );
-  
-      const source = `<source type="image/webp" srcset="${srcset["webp"]}" >`.replace('ASSETS_PATH', assets.path);
-  
-      const img = `<img
-        loading="lazy"
-        alt="${alt}"
-        src="${lowestSrc.url}"
-        srcset="${srcset["jpeg"]}">`.replace('ASSETS_PATH', assets.path);
-  
-      return `<picture> ${source} ${img} </picture>`.replace('ASSETS_PATH', assets.path);
+      return `<picture>
+        ${Object.values(metadata).map(imageFormat => {
+          return `  <source type="image/${imageFormat[0].format}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}">`;
+        }).join("\n")}
+          <img
+            loading="lazy"
+            src="${lowsrc.url}"
+            alt="${alt}">
+        </picture>`;
     });
 
     eleventyConfig.addPassthroughCopy("src/favicon.ico");
     eleventyConfig.addPassthroughCopy("src/robots.txt");
     eleventyConfig.addPassthroughCopy("src/assets/");
 
-    eleventyConfig.addLayoutAlias('base', 'base.njk')
-    eleventyConfig.addLayoutAlias('post', 'post.njk')
-    eleventyConfig.addLayoutAlias('page', 'page.njk')
+    eleventyConfig.addLayoutAlias('base', 'base.njk');
+    eleventyConfig.addLayoutAlias('post', 'post.njk');
+    eleventyConfig.addLayoutAlias('page', 'page.njk');
 
     return {
         dir: {

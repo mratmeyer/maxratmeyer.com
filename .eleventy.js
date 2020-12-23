@@ -76,7 +76,7 @@ module.exports = function(eleventyConfig) {
       let metadata = await Image(src, {
         widths: [1440],
         formats: ['webp', 'jpeg'],
-        urlPath: assets.path + "media/",
+        urlPath: "ASSETS" + "media/",
         outputDir: "./_site/assets/media/",
       });
   
@@ -84,13 +84,13 @@ module.exports = function(eleventyConfig) {
   
       return `<picture>
         ${Object.values(metadata).map(imageFormat => {
-          return `  <source type="image/${imageFormat[0].format}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}">`;
+          return `  <source type="image/${imageFormat[0].format}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}">`.replace('ASSETS', assets.path);
         }).join("\n")}
           <img
             loading="lazy"
             src="${lowsrc.url}"
             alt="${alt}">
-        </picture>`;
+        </picture>`.replace('ASSETS', assets.path);
     });
 
     eleventyConfig.addPassthroughCopy("src/favicon.ico");

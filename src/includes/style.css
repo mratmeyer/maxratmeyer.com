@@ -8,7 +8,7 @@ body {
 }
 
 .page-content {
-    color: #303030;
+    color: #414A4C;
     font-size: 20px;
 }
 
@@ -49,21 +49,21 @@ body {
 
 .nav-item {
     margin: 0 .5rem;
-    font-size: 22px;
+    font-size: 25px;
     padding-top: 30px;
     list-style-type: none;
 }
 
 .nav-link {
     text-decoration: none;
-    color: #383838;
+    color: #414A4C;
     font-weight: 600;
     padding-left: 1vw;
     padding-right: 1vw;
 }
 
 .nav-link:hover {
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .nav-button {
@@ -105,7 +105,7 @@ body {
 }
 
 .icon-bar {
-	width: 22px; 
+	width: 20px; 
 	height: 2px;
 	background-color: black;
 	display: block;
@@ -149,36 +149,43 @@ body {
 */
 
 .hero {
-    
-    color: #202020;
+    color: #212526;
     margin: 20px 0px 20px 0px;
     font-size: 85px;
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
+
+    animation-duration: .25s;
+    animation-name: hero;
 }
 
 .posthero {
-    
-    color: #383838;
+    color: #2d3638;
     margin: 20px 0px 20px 0px;
     font-size: 35px;
     text-align: center;
     font-weight: 600;
+
+    animation-duration: .25s;
+    animation-name: hero;
 }
 
 .social-icons {
     margin: 40px 0px 20px 0px;
     text-align: center;
+
+    animation-duration: .25s;
+    animation-name: hero;
 }
 
 .social-icon {
-    fill: #383838;
+    fill: #2d3638;
     width: 50px;
     margin: 0px 15px 0px 15px;
 }
 
 .social-icon:hover {
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .post-excerpts {
@@ -190,14 +197,13 @@ body {
 }
 
 .read-more {
-    
     margin: 20px 0px 20px 0px;
     text-align: center;
 }
 
 .read-more a {
-    font-size: 22px;
-    color: #383838;
+    font-size: 20px;
+    color: #414A4C;
     text-decoration: none;
     font-weight: bold;
 }
@@ -213,8 +219,8 @@ body {
 }
 
 .go-to-archives a {
-    font-size: 22px;
-    color: #383838;
+    font-size: 20px;
+    color: #414A4C;
     text-decoration: none;
     font-weight: bold;
 }
@@ -240,16 +246,27 @@ body {
     }
 }
 
+@keyframes hero {
+    from {
+      margin-left: 1%;
+      opacity: 50%;
+    }
+  
+    to {
+      margin-left: 0%;
+    }
+}
+
 /*
     Pages
 */
 
 .page-title {
     
-    color: #202020;
-    font-size: 70px;
+    color: #2d3638;
+    font-size: 65px;
     margin: 20px 0px 10px 0px;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
 }
 
@@ -266,25 +283,25 @@ body {
 
 .article-title {
     
-    color: #202020;
-    font-size: 50px;
+    color: #2d3638;
+    font-size: 45px;
     margin: 0px 0px 0px 0px;
     padding: 5px 0px 5px 0px;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
     clear: both;
 }
 
 .article-title a:hover {
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .date {
-    color: #202020;
     font-size: 25px;
     font-weight: 600;
     line-height: 50%;
     float: left;
+    color: #202526;
 }
 
 .article-content p {
@@ -293,15 +310,15 @@ body {
 }
 
 .article-content a {
-    color: #383838;
+    color: #414A4C;
 }
 
 .article-content a:hover {
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .article-content h2 {
-    
+    color: #202526;
     font-size: 35px;
     font-weight: bold;
     margin-top: 50px;
@@ -315,6 +332,8 @@ body {
     max-height: 750px;
     margin-top: 7%;
     margin-bottom: 7%;
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 /*
@@ -322,10 +341,10 @@ body {
 */
 
 .related-articles-header {
-    
     font-size: 50px;
     font-weight: bold;
     margin: 50px 0px 20px 0px;
+    color: #202526;
 }
 
 .related-articles-item {
@@ -333,9 +352,8 @@ body {
 }
 
 .related-articles-item a {
-    
-    color: #383838;
-    font-size: 22px;
+    color: #414A4C;
+    font-size: 20px;
     font-weight: bold;
     text-decoration: none;
 }
@@ -362,9 +380,9 @@ body {
     border-radius: 30px;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: #383838;
+    background-color: #fcfcfc;
     margin-right: 10px;
-    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -372,12 +390,15 @@ body {
     text-decoration: none;
 }
 
+.tags:hover {
+    opacity: 0.85;
+}
+
 .tags {
-    
     text-transform: uppercase;
     font-size: 20px;
     font-weight: 600;
-    color: white;
+    color: #202526;
     line-height: 20%;
 }
 
@@ -407,19 +428,19 @@ body {
 }
 
 .footer p {
-    
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     text-align: center;
+    color: #414A4C;
 }
 
 .footer a {
     text-decoration: none;
-    color: #383838;
+    color: #414A4C;
 }
 
 .footer a:hover {
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 @media only screen and (min-width: 960px) {
@@ -441,10 +462,20 @@ body {
          url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff') format('woff');
 }
   
-  @font-face {
+@font-face {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
+    font-display: swap;
+    src: local(''),
+         url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff2') format('woff2'),
+         url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
     font-display: swap;
     src: local(''),
          url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff2') format('woff2'),

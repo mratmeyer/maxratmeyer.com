@@ -193,23 +193,7 @@ body {
 }
 
 .post-excerpt {
-    margin: 0px 0px 40px 0px;
-}
-
-.read-more {
-    margin: 20px 0px 20px 0px;
-    text-align: center;
-}
-
-.read-more a {
-    font-size: 20px;
-    color: #414A4C;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.read-more a:hover {
-    text-decoration: underline;
+    margin: 0px 0px 20px 0px;
 }
 
 .go-to-archives {
@@ -384,6 +368,10 @@ body {
     margin-right: 10px;
     --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.tag:hover {
+    transform: translateY(-1px);
 }
 
 .tag-link {

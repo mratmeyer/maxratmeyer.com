@@ -5,7 +5,7 @@
    </div>
    {% if post.data.title %}
         <p class="article-title">
-            <a class="article-title" href="{{ post.url | url }}">{{ post.data.title or title }}</a>
+            <a class="article-title" href="{{ post.url | url }}">{{ post.data.title or title }} →</a>
         </p>
     {% else %}
         <p class="article-title">{{ post.data.title or title }}</p>

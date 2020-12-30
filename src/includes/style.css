@@ -1,4 +1,16 @@
 /*
+    Colors
+*/
+:root {
+    --light-1: #2D3638;
+    --light-2: #414A4C;
+    --light-hero: #212526;
+    --light-article-color: #202526;
+    --light-tag-color: #f5f5f5;
+    --light-background: white;
+}
+
+/*
     Site Wide CSS
 */
 
@@ -8,7 +20,7 @@ body {
 }
 
 .page-content {
-    color: #414A4C;
+    color: var(--light-2);
     font-size: 20px;
 }
 
@@ -56,7 +68,7 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #414A4C;
+    color: var(--light-2);
     font-weight: 600;
     padding-left: 1vw;
     padding-right: 1vw;
@@ -76,7 +88,7 @@ body {
         top: 10px;
         left: 8px;
         z-index: 2;
-        background-color: white;
+        background-color: var(--light-background);
         flex-direction: column;
         border: none;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
@@ -107,7 +119,7 @@ body {
 .icon-bar {
 	width: 20px; 
 	height: 2px;
-	background-color: black;
+	background-color: var(--light-hero);
 	display: block;
 	transition: all 0.15s;
 	margin-top: 4px
@@ -149,7 +161,7 @@ body {
 */
 
 .hero {
-    color: #212526;
+    color: var(--light-hero);
     margin: 20px 0px 20px 0px;
     font-size: 85px;
     text-align: center;
@@ -160,7 +172,7 @@ body {
 }
 
 .posthero {
-    color: #2d3638;
+    color: var(--light-1);
     margin: 20px 0px 20px 0px;
     font-size: 35px;
     text-align: center;
@@ -179,7 +191,7 @@ body {
 }
 
 .social-icon {
-    fill: #2d3638;
+    fill: var(--light-1);
     width: 50px;
     margin: 0px 15px 0px 15px;
 }
@@ -204,7 +216,7 @@ body {
 
 .go-to-archives a {
     font-size: 20px;
-    color: #414A4C;
+    color: var(--light-2);
     text-decoration: none;
     font-weight: bold;
 }
@@ -247,7 +259,7 @@ body {
 
 .page-title {
     
-    color: #2d3638;
+    color: var(--light-1);
     font-size: 65px;
     margin: 20px 0px 10px 0px;
     font-weight: 700;
@@ -267,7 +279,7 @@ body {
 
 .article-title {
     
-    color: #2d3638;
+    color: var(--light-1);
     font-size: 45px;
     margin: 0px 0px 0px 0px;
     padding: 5px 0px 5px 0px;
@@ -285,7 +297,7 @@ body {
     font-weight: 600;
     line-height: 50%;
     float: left;
-    color: #202526;
+    color: var(--light-article-colo);
 }
 
 .article-content p {
@@ -294,7 +306,7 @@ body {
 }
 
 .article-content a {
-    color: #414A4C;
+    color: var(--light-2);
 }
 
 .article-content a:hover {
@@ -302,7 +314,7 @@ body {
 }
 
 .article-content h2 {
-    color: #202526;
+    color: var(--light-article-colo);
     font-size: 35px;
     font-weight: bold;
     margin-top: 50px;
@@ -328,7 +340,7 @@ body {
     font-size: 50px;
     font-weight: bold;
     margin: 50px 0px 20px 0px;
-    color: #202526;
+    color: var(--light-article-color);
 }
 
 .related-articles-item {
@@ -336,7 +348,7 @@ body {
 }
 
 .related-articles-item a {
-    color: #414A4C;
+    color: var(--light-2);
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
@@ -364,7 +376,7 @@ body {
     border-radius: 30px;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: #f5f5f5;
+    background-color: var(--light-tag-color);
     margin-right: 10px;
     --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -386,7 +398,7 @@ body {
     text-transform: uppercase;
     font-size: 20px;
     font-weight: 600;
-    color: #202526;
+    color: var(--light-article-color);
     line-height: 20%;
 }
 
@@ -419,12 +431,12 @@ body {
     font-size: 20px;
     font-weight: 600;
     text-align: center;
-    color: #414A4C;
+    color: var(--light-2);
 }
 
 .footer a {
     text-decoration: none;
-    color: #414A4C;
+    color: var(--light-2);
 }
 
 .footer a:hover {
@@ -446,8 +458,8 @@ body {
     font-weight: 400;
     font-display: swap;
     src: local(''),
-         url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff2') format('woff2'),
-         url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff') format('woff');
+        url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff2') format('woff2'),
+        url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff') format('woff');
 }
   
 @font-face {
@@ -456,8 +468,8 @@ body {
     font-weight: 600;
     font-display: swap;
     src: local(''),
-         url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff2') format('woff2'),
-         url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff') format('woff');
+        url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff2') format('woff2'),
+        url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff') format('woff');
 }
 
 @font-face {
@@ -466,7 +478,7 @@ body {
     font-weight: 700;
     font-display: swap;
     src: local(''),
-         url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff2') format('woff2'),
-         url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff') format('woff');
+        url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff2') format('woff2'),
+        url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff') format('woff');
 }
   

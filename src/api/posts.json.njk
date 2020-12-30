@@ -9,7 +9,7 @@ eleventyExcludeFromCollections: true
     "title" : "{{ post.data.title }}",
     "date" : "{{ post.data.date }}",
     "tags" : "{{ post.data.tags }}",
-    "text" : "{{ post.templateContent }}"
+    "text" : "{{ post.templateContent | stripHTML }}"
   }{% if not loop.last %},{% else %}{%- endif -%}
   {%- endfor -%}
 ]}

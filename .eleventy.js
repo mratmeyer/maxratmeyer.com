@@ -19,6 +19,9 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("toISOString", function(dateIn) {
         return moment(dateIn).tz('GMT').format('YYYY-MM-DD');
     });
+    eleventyConfig.addFilter("stripHTML", function(text) {
+      return text.replace(/(&lt;.*?&gt;)/gi, '').replace(/\.|\,|\?|-|—|\n/g, '');
+    });
 
     // Minify HTML
     eleventyConfig.addTransform("htmlmin", function(content, outputPath) {

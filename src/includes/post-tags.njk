@@ -1,20 +1,8 @@
 <div class="tag-container">
   {%- for tag in post.data.tags -%}
-    {% if (tag != "posts") %}    
-      <div class="tag">
-        <a class="tag-link" href="/tags/{{ tag }}/">
-          <p class="tags">{{ tag }}</p>
-        </a>
-      </div>
-    {% endif %}
+    {% include "tag.njk" %}
   {%- endfor -%}
   {%- for tag in tags -%}
-    {% if (tag != "posts") %}    
-      <div class="tag">
-        <a class="tag-link" href="/tags/{{ tag }}/">
-          <p class="tags">{{ tag }}</p>
-        </a>
-      </div>
-    {% endif %}
+    {% include "tag.njk" %}
   {%- endfor -%}
 </div>

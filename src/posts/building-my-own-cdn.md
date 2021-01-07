@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Building my own CDN"
 date: 2020-07-31
 description: "How I built my own CDN for my site from scratch."

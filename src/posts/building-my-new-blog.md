@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Building my new blog"
 date: 2020-05-26
 description: "My journey building my blog on the JAMStack with Eleventy and Netlify."

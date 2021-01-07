@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "GHBuddies Progress Update 1"
 date: 2020-03-23
 description: "Progress Update for GHBuddies, a project I started at GHP last summer."

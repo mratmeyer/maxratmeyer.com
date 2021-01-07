@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Managing my DNS through DNSControl"
 date: 2020-08-31
 description: "How I manage my DNS records with git and JavaScript using DNSControl."

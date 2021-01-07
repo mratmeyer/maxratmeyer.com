@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "VPNs are overrated"
 date: 2020-04-19
 description: "VPNs are touted as an all in one tool to secure yourself online, but the reality is a lot more complicated."

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Unihack 2020: Building Study Generator"
 permalink: /blog/unihack-2020-building-study-generator/
 date: 2020-11-29

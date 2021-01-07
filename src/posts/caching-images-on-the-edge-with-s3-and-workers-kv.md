@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Caching Images on the Edge with S3 and Workers KV"
 date: 2020-06-08
 description: "How I set up CloudFlare Workers to cache Amazon S3 files on CloudFlare Workers KV."

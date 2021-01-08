@@ -6,6 +6,30 @@ const Image = require("@11ty/eleventy-img");
 const moment = require('moment-timezone');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
+async function imageShortcode(src, alt, sizes) {
+  src = "./src/assets/media/" + src;
+  
+  let metadata = await Image(src, {
+    widths: [720, 1440],
+    formats: ['webp', 'jpeg'],
+    urlPath: "ASSETS" + "media/",
+    outputDir: "./_site/assets/media/",
+  });
+
+  let imageAttributes = {
+    alt,
+    sizes,
+    loading: "lazy",
+    decoding: "async",
+  };
+
+  let result = Image.generateHTML(metadata, imageAttributes);
+
+  result = result.replace(/ASSETS/g, assets.path);
+
+  return result;
+}
+
 module.exports = function(eleventyConfig) {
 
     eleventyConfig.setDataDeepMerge(true);
@@ -68,33 +92,7 @@ module.exports = function(eleventyConfig) {
       return [...tagSet];
     });
 
-    // Add 'Image' shortcode
-    eleventyConfig.addNunjucksAsyncShortcode("Image", async function(src, alt) {
-      src = "./src/assets/media/" + src; // Append the location of the media directory
-
-      if(alt === undefined) {
-        throw new Error(`Missing \`alt\` on Image from: ${src}`);
-      }
-  
-      let metadata = await Image(src, {
-        widths: [1440],
-        formats: ['webp', 'jpeg'],
-        urlPath: "ASSETS" + "media/",
-        outputDir: "./_site/assets/media/",
-      });
-  
-      let lowsrc = metadata.jpeg[0];
-  
-      return `<picture>
-        ${Object.values(metadata).map(imageFormat => {
-          return `  <source type="image/${imageFormat[0].format}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}">`.replace('ASSETS', assets.path);
-        }).join("\n")}
-          <img
-            loading="lazy"
-            src="${lowsrc.url}"
-            alt="${alt}">
-        </picture>`.replace('ASSETS', assets.path);
-    });
+    eleventyConfig.addNunjucksAsyncShortcode("Image", imageShortcode);
 
     eleventyConfig.addPassthroughCopy("src/favicon.ico");
     eleventyConfig.addPassthroughCopy("src/robots.txt");

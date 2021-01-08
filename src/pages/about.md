@@ -9,4 +9,4 @@ Hey everyone, I’m Max Ratmeyer, a high school student in Atlanta, Georgia. Thi
 
 My interests are in Cybersecurity, App development, web development… basically most things computer science.
 
-If you have any questions, comments, or feedback, feel free to reach out to me at <max@ratmeyer.com>.
+If you have any questions, comments, or feedback, feel free to reach out to me at <hello@maxratmeyer.com>.

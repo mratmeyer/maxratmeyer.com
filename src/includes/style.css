@@ -36,7 +36,7 @@ a:hover {
     }
     
     .page-content {
-        margin-top: 2rem;
+        margin-top: 7rem;
     }
 }
 
@@ -59,8 +59,8 @@ a:hover {
 
 .nav-item {
     font-size: 25px;
-    padding: 1.5rem;
     list-style-type: none;
+    padding: 1.5rem;
 }
 
 .nav-link {
@@ -69,10 +69,79 @@ a:hover {
     text-decoration: none;
 }
 
+.nav-button {
+    display: none;
+}
+
 @media only screen and (max-width: 42em) {
     .nav-item {
-        padding: 1rem;
+        padding: 12px;
     }
+    .nav-list {
+        background-color: var(--light-background);
+        border-radius: 15px;
+        border: none;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+        flex-direction: column;
+        position: absolute;
+        z-index: 2;
+        padding: 3.25rem 1rem 1rem 1rem;
+        top: -2px;
+        left: 12px;
+    }
+    .nav-button {
+        align-self: flex-start;
+        border: none;
+        cursor: pointer;
+        display: block;
+        margin: 12px 0 0 12px;
+        outline: none;
+        position: absolute;
+        z-index: 3;
+    }
+    #overlay {
+        display: none;
+    }
+}
+
+.icon-bar {
+	width: 22px; 
+	height: 2px;
+	background-color: var(--light-hero);
+	display: block;
+	transition: all 0.2s;
+	margin-top: 4px
+}
+ 
+.nav-button {
+  border: none;
+  background: transparent !important;
+}
+
+.nav-button .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+ 
+.nav-button .middle-bar {
+  opacity: 0;
+}
+ 
+.nav-button .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+ 
+.nav-button.collapsed .top-bar {
+  transform: rotate(0);
+}
+ 
+.nav-button.collapsed .middle-bar {
+  opacity: 1;
+}
+ 
+.nav-button.collapsed .bottom-bar {
+  transform: rotate(0);
 }
 
 /*

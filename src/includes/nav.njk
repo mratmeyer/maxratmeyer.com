@@ -1,10 +1,5 @@
 <nav>
-  <button class="nav-button collapsed" id="nav-button" type="button" onclick="toggleNavbar()" aria-label="Navigation Button">
-    <span class="icon-bar top-bar"></span>
-    <span class="icon-bar middle-bar"></span>
-    <span class="icon-bar bottom-bar"></span>				
-  </button>
-  <ul class="nav-list" id="overlay">
+  <ul class="nav-list">
     <li class="nav-item"> 
       <a href="/" class="nav-link">Home</a>
     </li>
@@ -16,19 +11,3 @@
     </li>
   </ul>
 </nav>
-<script>
-  const button = document.querySelector('.nav-button')
-  let collapsed = true;
-
-  function toggleNavbar() { 
-    if (!collapsed) {
-      button.classList.add('collapsed');
-      collapsed = true;
-      document.getElementById("overlay").style.display = "none";
-    } else {
-      button.classList.remove('collapsed');
-      collapsed = false;
-      document.getElementById("overlay").style.display = "block";
-    }
-  }
-</script>

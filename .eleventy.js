@@ -25,7 +25,7 @@ async function imageShortcode(src, alt, sizes) {
 
   let result = Image.generateHTML(metadata, imageAttributes);
 
-  result = result.replace(/ASSETS/g, assets.path);
+  result = result.replace(/ASSETS/g, assets.imagePath);
 
   return result;
 }

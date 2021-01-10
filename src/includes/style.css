@@ -94,7 +94,7 @@ a:hover {
         border: none;
         cursor: pointer;
         display: block;
-        margin: 12px 0 0 12px;
+        margin: 13px 0 0 18px;
         outline: none;
         padding: 0;
         position: absolute;
@@ -108,7 +108,7 @@ a:hover {
 .icon-bar {
 	width: 22px; 
 	height: 2px;
-	background-color: var(--light-hero);
+	background-color: var(--light-1);
 	display: block;
 	transition: all 0.2s;
 	margin-top: 4px

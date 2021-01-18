@@ -38,7 +38,7 @@ Here, you can see once the image has been cached not only on Workers KV but also
 
 There are two ways to set this up, you can either copy and paste the code below into a new Worker, or you can clone [this GitHub repository](https://github.com/MaxRatmeyer/workers-asset-cache) and use Wrangler to publish it. To use the CloudFlare dashboard, first go to the Workers page and create a new Worker. Once you've done that, paste the script below and save and deploy it. Next, go to back to the Workers dashboard, and click on the Worker and click Settings. Once you are in the Settings option, the first thing you need to do is create an environmental variable which contains the endpoint where your files are stored. For example, if you are using Amazon S3, make a variable called 'SERVICE' and assign the value to 'https://BUCKET.s3.amazonaws.com'. (Also make sure you've configured the correct S3 policy settings.) 
 
-<script src="https://gist.github.com/MaxRatmeyer/4bf0da0d23fe634c30972e6eafe4605e.js"></script>
+<script src="https://gist.github.com/mratmeyer/4bf0da0d23fe634c30972e6eafe4605e.js"></script>
 
 Next, you need to assign the KV Namespace binding. At the top of the screen, click KV, and create a new namespace. Once you've done that, go back to the Worker's settings, and create a binding for the variables 'ASSETS' to whatever KV space name you just created. Once you're done, your Settings page should look like this.
 

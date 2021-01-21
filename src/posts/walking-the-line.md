@@ -1,7 +1,7 @@
 ---
 title: "Walking the Line"
 date: 2021-01-20
-description: "My thoughts on technologies roll in moderating speech."
+description: "My thoughts on big tech's roll in moderating content."
 tags:
   - opinions
 ---

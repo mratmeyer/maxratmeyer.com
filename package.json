@@ -3,7 +3,7 @@
   "version": "2.6.0",
   "description": "Personal blog built on Eleventy.",
   "scripts": {
-    "build": "eleventy",
+    "build": "ANALYTICS=true eleventy",
     "watch": "eleventy --watch",
     "serve": "eleventy --serve",
     "debug": "DEBUG=* eleventy"

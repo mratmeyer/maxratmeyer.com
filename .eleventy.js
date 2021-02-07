@@ -1,4 +1,4 @@
-const assets = require("./src/data/assets");
+const config = require("./src/data/config");
 const CleanCSS = require("clean-css");
 const excerpt = require('eleventy-plugin-excerpt');
 const htmlmin = require("html-minifier");
@@ -25,7 +25,7 @@ async function imageShortcode(src, alt, sizes) {
 
   let result = Image.generateHTML(metadata, imageAttributes);
 
-  result = result.replace(/ASSETS/g, assets.imagePath);
+  result = result.replace(/ASSETS/g, config.imagePath);
 
   return result;
 }

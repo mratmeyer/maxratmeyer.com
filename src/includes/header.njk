@@ -9,11 +9,11 @@
     {% endif %}
     <meta name="description" content="{{ renderData.description or description or metadata.description }}"/>
 
-    {% if assets.path !== "/assets/" %}
-        <link rel="preconnect" href="{{ assets.path }}" crossorigin>
+    {% if config.path !== "/assets/" %}
+        <link rel="preconnect" href="{{ config.path }}" crossorigin>
     {% endif %}
 
-    <link rel="preload" href="{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ config.path }}fonts/inter-v2-latin-400-600-700.woff2" as="font" type="font/woff2" crossorigin>
 
     {% set css %}
     {% include "style.css" %}

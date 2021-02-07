@@ -435,8 +435,8 @@ a:hover {
     font-weight: 400;
     font-display: swap;
     src: local(''),
-        url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff2') format('woff2'),
-        url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff') format('woff');
+        url('{{ config.path }}fonts/inter-v2-latin-400-600-700.woff2') format('woff2'),
+        url('{{ config.path }}fonts/inter-v2-latin-400-600-700.woff') format('woff');
 }
   
 @font-face {
@@ -445,8 +445,8 @@ a:hover {
     font-weight: 600;
     font-display: swap;
     src: local(''),
-        url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff2') format('woff2'),
-        url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff') format('woff');
+        url('{{ config.path }}fonts/inter-v2-latin-400-600-700.woff2') format('woff2'),
+        url('{{ config.path }}fonts/inter-v2-latin-400-600-700.woff') format('woff');
 }
 
 @font-face {
@@ -455,6 +455,6 @@ a:hover {
     font-weight: 700;
     font-display: swap;
     src: local(''),
-        url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff2') format('woff2'),
-        url('{{ assets.path }}fonts/inter-v2-latin-400-600-700.woff') format('woff');
+        url('{{ config.path }}fonts/inter-v2-latin-400-600-700.woff2') format('woff2'),
+        url('{{ config.path }}fonts/inter-v2-latin-400-600-700.woff') format('woff');
 }

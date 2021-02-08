@@ -58,6 +58,10 @@ a:hover {
         margin-top: 4rem;
         width: 42em;
     }
+
+    .page-content {
+        margin-top: 2rem;
+    }
 }
 
 /*
@@ -66,7 +70,6 @@ a:hover {
 
 .nav-list {
     display: flex;
-    padding: 0;
 }
 
 .nav-item {
@@ -98,8 +101,9 @@ a:hover {
         position: absolute;
         z-index: 2;
         padding: 3.25rem 1rem 1rem 1rem;
+        margin-top: 5px;
         top: -2px;
-        left: 12px;
+        left: 4px;
     }
     .nav-button {
         align-self: flex-start;
@@ -165,7 +169,7 @@ a:hover {
     color: var(--hero);
     font-size: 80px;
     font-weight: 700;
-    margin: 30px 0px 25px 0px;
+    margin: 40px 0px 30px 0px;
     text-align: center;
 
     animation-duration: .25s;
@@ -256,7 +260,7 @@ a:hover {
 .page-title {
     color: var(--shade-1);
     font-size: 65px;
-    margin: 20px 0px 10px 0px;
+    margin: 0px 0px 20px 0px;
     font-weight: 700;
     text-decoration: none;
 }
@@ -265,7 +269,7 @@ a:hover {
     Archives Page
 */
 .archive-item {
-    margin: 0px 0px 20px 0px;
+    margin-bottom: 20px;
 }
 
 /*
@@ -275,9 +279,9 @@ a:hover {
 .article-title {
     color: var(--shade-1);
     font-size: 45px;
-    margin: 0px 0px 0px 0px;
-    padding: 5px 0px 5px 0px;
     font-weight: 700;
+    padding-top: 2px;
+    line-height: 120%;
     text-decoration: none;
     clear: both;
 }
@@ -285,9 +289,13 @@ a:hover {
 .date {
     font-size: 25px;
     font-weight: 600;
-    line-height: 50%;
+    margin-top: 10px;
     float: left;
     color: var(--article-color);
+}
+
+.article-details {
+    padding-bottom: 10px;
 }
 
 .article-content p {
@@ -302,8 +310,10 @@ a:hover {
 .article-content h2 {
     color: var(--article-colo);
     font-size: 35px;
+    line-height: 120%;
     font-weight: bold;
-    margin-top: 50px;
+    margin-top: 25px;
+    margin-bottom: 10px;
 }
 
 .article-content img {
@@ -353,20 +363,20 @@ a:hover {
 
 .tag-list {
     margin-top: 20px;
+    padding-bottom: 20px;
 }
 
 .tag-container {
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .tag {
     border-radius: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 20px 15px 20px 15px;
     background-color: var(--tag-color);
     margin-right: 10px;
-    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
     text-decoration: none;
 }
@@ -386,13 +396,14 @@ a:hover {
 @media only screen and (max-width: 520px) {
     .tag-container {
         clear: both;
+        padding-top: 15px;
+        margin-bottom: 0px;
     }
 }
 
 @media only screen and (min-width: 520px) {
     .tag {
         position: relative;
-        top: 10px;
     }
     .tag-container {
         margin-left: 15px;

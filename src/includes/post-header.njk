@@ -1,7 +1,7 @@
 <div class="article-header">
    <div class="article-details">
             <p class="date">{{ (post.data.date or post.date or date) | dateformat }}</p>
-        {% include "post-tags.njk" %}
+            {% include "post-tags.njk" %}
    </div>
    {% if post.data.title %}
         <p class="article-title">

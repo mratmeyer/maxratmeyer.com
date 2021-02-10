@@ -1,7 +1,7 @@
 /*
     Colors
 */
-:root {
+body.light {
     --shade-1: #2D3638;
     --shade-2: #414A4C;
     --hero: #212526;
@@ -10,15 +10,13 @@
     --background: white;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --shade-1: #e6e6e6;
-        --shade-2: #e6e6e6;
-        --hero: #e6e6e6;
-        --article-color: #e6e6e6;
-        --tag-color: #323232;
-        --background: #141414;
-    }
+body.dark {
+    --shade-1: #e6e6e6;
+    --shade-2: #e6e6e6;
+    --hero: #e6e6e6;
+    --article-color: #e6e6e6;
+    --tag-color: #323232;
+    --background: #141414;
 }
 
 /*
@@ -86,6 +84,17 @@ a:hover {
 
 .nav-button {
     display: none;
+}
+
+.nav-icon-item {
+    margin-left: auto;
+    order: 2;
+}
+
+.nav-icon {
+    fill: var(--shade-1);
+    cursor: pointer;
+    width: 25px;
 }
 
 @media only screen and (max-width: 42em) {

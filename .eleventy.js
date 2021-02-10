@@ -2,6 +2,7 @@ const config = require("./src/data/config");
 const CleanCSS = require("clean-css");
 const excerpt = require('eleventy-plugin-excerpt');
 const htmlmin = require("html-minifier");
+const { minify } = require("terser");
 const Image = require("@11ty/eleventy-img");
 const moment = require('moment-timezone');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
@@ -64,6 +65,20 @@ module.exports = function(eleventyConfig) {
     // Minify CSS
     eleventyConfig.addFilter("cssmin", function(code) {
       return new CleanCSS({}).minify(code).styles;
+    });
+
+    // Minify JS
+    eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (
+      code,
+      callback
+    ) {
+      try {
+        const minified = await minify(code);
+        callback(null, minified.code);
+      } catch (err) {
+        console.error("Terser error: ", err);
+        callback(null, code);
+      }
     });
 
     // Set up tags collection

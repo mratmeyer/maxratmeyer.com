@@ -3,14 +3,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     {% if title == "Max Ratmeyer's Blog" %}
-        <title>{{ renderData.title or title or metadata.title }}</title>
+    <title>{{ renderData.title or title or metadata.title }}</title>
     {% else %}
-        <title>{{ renderData.title or title or metadata.title }} - Max Ratmeyer's Blog</title>
+    <title>{{ renderData.title or title or metadata.title }} - Max Ratmeyer's Blog</title>
     {% endif %}
     <meta name="description" content="{{ renderData.description or description or metadata.description }}"/>
 
     {% if config.path !== "/assets/" %}
-        <link rel="preconnect" href="{{ config.path }}" crossorigin>
+    <link rel="preconnect" href="{{ config.path }}" crossorigin>
     {% endif %}
 
     <link rel="preload" href="{{ config.path }}fonts/inter-v2-latin-400-600-700.woff2" as="font" type="font/woff2" crossorigin>

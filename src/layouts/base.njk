@@ -3,7 +3,7 @@
 
 {% include "header.njk" %}
 
-<body class="light">
+<body class="light-theme">
 
   {% set js %}
     {% include "theme.js" %}
@@ -24,9 +24,7 @@
       {% include "nav.njk" %}
 
       <div class="page-content">
-
-        {{ content | safe }}
-        
+      {{ content | safe }}
       </div>
       
     </div>

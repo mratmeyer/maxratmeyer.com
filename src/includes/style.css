@@ -1,7 +1,7 @@
 /*
     Colors
 */
-body.light {
+body.light-theme {
     --shade-1: #2D3638;
     --shade-2: #414A4C;
     --hero: #212526;
@@ -10,7 +10,7 @@ body.light {
     --background: white;
 }
 
-body.dark {
+body.dark-theme {
     --shade-1: #e6e6e6;
     --shade-2: #e6e6e6;
     --hero: #e6e6e6;
@@ -340,28 +340,28 @@ a:hover {
 }
 
 /*
-    Related Articles
+    Related Posts
 */
 
-.related-articles-header {
+.related-posts-header {
     font-size: 50px;
     font-weight: bold;
     margin: 50px 0px 20px 0px;
     color: var(--article-color);
 }
 
-.related-articles-item {
+.related-posts-item {
     margin: 20px 0px 20px 0px;
 }
 
-.related-articles-item a {
+.related-posts-item a {
     color: var(--shade-2);
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
 }
 
-.related-articles-item p {
+.related-posts-item p {
     font-size: 18px;
     margin: 10px 0px 0px 0px;
 }

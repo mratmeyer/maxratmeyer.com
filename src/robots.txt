@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /assets/
-Disallow: /api/
 
 Sitemap: https://www.maxratmeyer.com/sitemap.xml

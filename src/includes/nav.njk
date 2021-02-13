@@ -21,9 +21,9 @@
 </nav>
 
 {% set js %}
-  {% include "nav.js" %}
+{% include "nav.js" %}
 {% endset %}
 
 <script>
-  {{ js | jsmin | safe }}
+{{ js | jsmin | safe }}
 </script>

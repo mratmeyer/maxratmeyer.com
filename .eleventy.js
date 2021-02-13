@@ -1,8 +1,8 @@
-const config = require("./src/data/config");
+const { minify } = require("terser");
 const CleanCSS = require("clean-css");
+const config = require("./src/data/config");
 const excerpt = require('eleventy-plugin-excerpt');
 const htmlmin = require("html-minifier");
-const { minify } = require("terser");
 const Image = require("@11ty/eleventy-img");
 const moment = require('moment-timezone');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
@@ -41,7 +41,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("dateformat", function(dateIn) {
         return moment(dateIn).tz('GMT').format('MMM DD, YYYY');
     });
-    
+
     eleventyConfig.addFilter("toISOString", function(dateIn) {
         return moment(dateIn).tz('GMT').format('YYYY-MM-DD');
     });
@@ -89,7 +89,7 @@ module.exports = function(eleventyConfig) {
 
           tags = tags.filter(function(item) {
             switch(item) {
-            case "posts":
+              case "posts":
                 return false;
             }
 
@@ -116,16 +116,16 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addLayoutAlias('page', 'page.njk');
 
     return {
-        dir: {
-            input: "src",
-            output: "_site",
-            includes: "includes",
-            layouts: 'layouts',
-            data: 'data'
-        },
-        templateFormats: ['njk', 'md'],
-        htmlTemplateEngine: 'njk',
-        markdownTemplateEngine: 'njk',
-        passthroughFileCopy: true
+      dir: {
+          input: "src",
+          output: "_site",
+          includes: "includes",
+          layouts: 'layouts',
+          data: 'data'
+      },
+      templateFormats: ['njk', 'md'],
+      htmlTemplateEngine: 'njk',
+      markdownTemplateEngine: 'njk',
+      passthroughFileCopy: true
     };
 };

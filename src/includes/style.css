@@ -178,6 +178,7 @@ a:hover {
     color: var(--hero);
     font-size: 80px;
     font-weight: 700;
+    line-height: 110%;
     margin: 40px 0px 30px 0px;
     text-align: center;
 
@@ -189,6 +190,7 @@ a:hover {
     color: var(--shade-1);
     font-size: 35px;
     font-weight: 600;
+    line-height: 110%;
     margin: 25px 0px 25px 0px;
     text-align: center;
 
@@ -244,10 +246,16 @@ a:hover {
 
 @media only screen and (max-width: 960px) {
     .hero {
-        font-size: 55px;
+        font-size: 75px;
     }
     .posthero {
-        font-size: 30px;
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hero {
+        font-size: 60px;
     }
 }
 

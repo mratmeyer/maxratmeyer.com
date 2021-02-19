@@ -360,27 +360,46 @@ a:hover {
     Related Posts
 */
 
-.related-posts-header {
-    font-size: 50px;
-    font-weight: bold;
-    margin: 50px 0px 20px 0px;
-    color: var(--article-color);
+.related-post-item {
+    border: none;
+    margin: .5rem;
+    border-radius: 10px;
+    padding: 1rem;
+    height: 75%;
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.related-posts-item {
-    margin: 20px 0px 20px 0px;
-}
-
-.related-posts-item a {
-    color: var(--shade-2);
+.related-post-title {
+    margin-bottom: 10px;
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
+    color: var(--shade-2);
 }
 
-.related-posts-item p {
-    font-size: 18px;
-    margin: 10px 0px 0px 0px;
+.related-post-title-link {
+    text-decoration: none;
+    color: var(--shade-2);
+}
+
+.related-post-description {
+    line-height: 120%;
+}
+
+@media only screen and (min-width: 700px) {
+    .related-posts-container {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .related-post-item {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
 }
 
 /*

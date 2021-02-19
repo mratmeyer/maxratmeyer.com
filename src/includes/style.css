@@ -92,7 +92,7 @@ a:hover {
 }
 
 .nav-icon {
-    fill: var(--shade-1);
+    color: var(--shade-1);
     cursor: pointer;
     width: 25px;
 }
@@ -331,6 +331,14 @@ a:hover {
     font-weight: bold;
     margin-top: 25px;
     margin-bottom: 10px;
+}
+
+.article-content ul {
+    list-style: disc inside;
+}
+
+.article-content li {
+    line-height: 150%;
 }
 
 .article-content img {

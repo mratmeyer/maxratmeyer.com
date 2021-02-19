@@ -280,6 +280,7 @@ a:hover {
     margin: 0px 0px 20px 0px;
     font-weight: 700;
     text-decoration: none;
+    overflow-wrap: break-word;
 }
 
 /*

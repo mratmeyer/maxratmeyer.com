@@ -13,10 +13,6 @@
     {{ js | jsmin | safe }}
   </script>
 
-  {% if config.analytics == "true" %}
-  <noscript><img src="https://stats.maxnet.work/ingress/a0985a5e-79b2-455b-a849-9c3f5fd40371/pixel.gif"></noscript> <script src="https://stats.maxnet.work/ingress/a0985a5e-79b2-455b-a849-9c3f5fd40371/script.js"></script>
-  {% endif %}
-
   <div class="page-container">
 
     <div class="content-container">
@@ -32,6 +28,10 @@
     {% include "footer.njk" %}
 
   </div>
+
+  {% if config.analytics == "true" %}
+  <noscript><img src="https://stats.maxnet.work/ingress/a0985a5e-79b2-455b-a849-9c3f5fd40371/pixel.gif"></noscript> <script src="https://stats.maxnet.work/ingress/a0985a5e-79b2-455b-a849-9c3f5fd40371/script.js"></script>
+  {% endif %}
 
 </body>
 

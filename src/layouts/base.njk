@@ -29,8 +29,14 @@
 
   </div>
 
+  {% set js %}
+    {% include "analytics.js" %}
+  {% endset %}
+
   {% if config.analytics == "true" %}
-  <noscript><img src="https://stats.maxnet.work/ingress/d5869121-a39c-443b-ac53-96fd87be7dd4/pixel.gif"></noscript> <script async defer src="https://stats.maxnet.work/ingress/d5869121-a39c-443b-ac53-96fd87be7dd4/script.js"></script>
+  <noscript><img src="https://stats.maxnet.work/ingress/d5869121-a39c-443b-ac53-96fd87be7dd4/pixel.gif"></noscript><script async defer>
+    {{ js | jsmin | safe }}
+  </script>
   {% endif %}
 
 </body>

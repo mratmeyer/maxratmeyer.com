@@ -15,6 +15,10 @@
     <link rel="preconnect" href="{{ config.path }}" crossorigin>
     {% endif %}
 
+    {% if config.analytics == "true" %}
+    <link rel="preconnect" href="https://stats.maxnet.work" crossorigin>
+    {% endif %}
+
     {% set css %}
     {% include "reset.css" %}
     {% include "style.css" %}

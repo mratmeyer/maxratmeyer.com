@@ -11,12 +11,12 @@ body.light-theme {
 }
 
 body.dark-theme {
-    --shade-1: #e6e6e6;
-    --shade-2: #e6e6e6;
-    --hero: #e6e6e6;
-    --article-color: #e6e6e6;
+    --shade-1: #e1e1e1;
+    --shade-2: #e1e1e1;
+    --hero: #e1e1e1;
+    --article-color: #e1e1e1;
     --tag-color: #323232;
-    --background: #141414;
+    --background: #191919;
 }
 
 /*

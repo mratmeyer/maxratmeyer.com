@@ -1,7 +1,7 @@
 ---
 title: "Walking the Line"
 date: 2021-01-20
-description: "My thoughts on big tech's roll in moderating content."
+description: "My thoughts on big tech's role in moderating content."
 tags:
   - opinions
 ---

@@ -52,6 +52,9 @@ module.exports = function(eleventyConfig) {
         let minified = htmlmin.minify(content, {
           useShortDoctype: true,
           removeComments: true,
+          ignoreCustomComments: [
+            /^\s+license/
+          ],
           collapseWhitespace: true
         });
 

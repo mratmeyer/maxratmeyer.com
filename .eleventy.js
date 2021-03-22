@@ -53,7 +53,7 @@ module.exports = function(eleventyConfig) {
           useShortDoctype: true,
           removeComments: true,
           ignoreCustomComments: [
-            /^\s+license/
+            /^\s+View/
           ],
           collapseWhitespace: true
         });

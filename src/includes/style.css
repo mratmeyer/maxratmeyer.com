@@ -356,6 +356,37 @@ a:hover {
 }
 
 /*
+    Article Misc.
+*/
+.misc-button {
+    display: inline-block;
+    margin-top: 7.5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.misc-container {
+    display: flex;
+}
+
+.misc-icon {
+    fill: var(--shade-1);
+    width: 25px;
+    padding-right: 10px;
+}
+
+.misc-link-text {
+    display: block;
+    color: var(--shade-2);
+    font-weight: 600;
+    padding-top: 3px;
+}
+
+/*
     Related Posts
 */
 

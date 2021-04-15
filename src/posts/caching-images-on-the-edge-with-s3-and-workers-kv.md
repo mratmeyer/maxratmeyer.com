@@ -5,6 +5,7 @@ description: "My setup using Cloudflare Workers and Workers' KV database to cach
 tags:
   - guides
   - projects
+repository: https://github.com/mratmeyer/workers-asset-cache/
 ---
 When I was building this blog, one of the decisions I had to make was where to host my media. One of the options was to just upload everything to my GitHub repository and deploy it along with the site, but in the long term that can get clunky because Git isn't ideal for handling tons of media. I also wanted to manage my media and photos separately from my website's GitHub repository, so I went with Amazon S3, Amazon's object storage service.
 

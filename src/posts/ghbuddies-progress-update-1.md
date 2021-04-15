@@ -4,6 +4,7 @@ date: 2020-03-23
 description: "Progress Update for GHBuddies, a project I started at GHP last summer."
 tags:
   - projects
+repository: https://github.com/mratmeyer/GHBuddies-Web-App
 ---
 Last summer, I attended Georgia's Governor's Honors program and I started a project with my friend Akash called GHBuddies. Essentially, after hall checks at 7:30 PM, you are required to have a buddy if you want to leave your dorm room. Most of the time, everyone split up and it could be hard to coordinate with other people if you wanted to go somewhere. Sometimes I got stuck at the dorm room and had to do something on my own or wait and see if anyone else was planning on leaving the dorms, hence we got the idea for GHBuddies.
 

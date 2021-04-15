@@ -6,6 +6,7 @@ description: "My experience building Study Generator at my first hackathon."
 tags:
   - projects
   - experiences
+repository: https://github.com/MLHUnihack2020/StudyGuideFrontend
 ---
 This past weekend, my friend Akash and I attended Unihack, an international hackathon with a focus on solving civic issues. I've never attended a hackathon, so this was all new to me, but this was Akash's fourth hackathon. Going in, I was looking forward to building another project and playing around with some web development.
 

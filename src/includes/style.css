@@ -371,6 +371,7 @@ a:hover {
 
 .misc-container {
     display: flex;
+    align-items: center;
 }
 
 .misc-icon {
@@ -384,7 +385,6 @@ a:hover {
     display: block;
     color: var(--shade-2);
     font-weight: 600;
-    padding-top: 3px;
 }
 
 /*

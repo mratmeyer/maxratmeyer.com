@@ -376,6 +376,7 @@ a:hover {
 .misc-icon {
     fill: var(--shade-1);
     width: 25px;
+    height: 25px;
     padding-right: 10px;
 }
 

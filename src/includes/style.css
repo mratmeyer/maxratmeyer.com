@@ -197,7 +197,7 @@ a:hover {
     animation-name: hero;
 }
 
-.social-icons {
+.service-icons {
     margin: 45px 0px 20px 0px;
     text-align: center;
 
@@ -205,7 +205,7 @@ a:hover {
     animation-name: hero;
 }
 
-.social-icon {
+.service-icon {
     fill: var(--shade-1);
     width: 50px;
     margin: 0px 15px 0px 15px;

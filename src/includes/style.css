@@ -74,7 +74,7 @@ a:hover {
 
 .nav-item {
     font-size: 24px;
-    padding: 1.6rem;
+    padding: 1.5rem;
 }
 
 .nav-link {
@@ -92,6 +92,13 @@ a:hover {
     color: var(--shade-1);
     cursor: pointer;
     width: 25px;
+}
+
+@media only screen and (max-width: 42em) {
+    .nav-item {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
 
 /*
@@ -126,7 +133,6 @@ a:hover {
 
 .posthero {
     color: var(--shade-1);
-    font-size: 24px;
     line-height: 150%;
     margin-bottom: 15px;
 }
@@ -154,6 +160,18 @@ a:hover {
 
 .go-to-archives a:hover {
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 42em) {
+    .posthero {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (min-width: 42em) {
+    .posthero {
+        font-size: 24px;
+    }
 }
 
 /*

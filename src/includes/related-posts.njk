@@ -3,10 +3,10 @@
   {% if loop.index0 < 4 %}
   <a class="related-post-title-link" href="{{ post.url | url }}">
     <div class="related-post-item">
-      <p class="related-post-title">
+      <span class="related-post-title">
         {{ post.data.title }}
-      </p>
-      <p class="related-post-description">{{ post.data.description }}</p>
+      </span>
+      <span class="related-post-description">{{ post.data.description }}</span>
     </div>
   </a>
   {% endif %}

@@ -1,12 +1,12 @@
 <div class="article-header">
     <div class="article-details">
-        <p class="date">{{ (post.data.date or post.date or date) | dateformat }}</p>
+        <span class="date">{{ (post.data.date or post.date or date) | dateformat }}</span>
         {% include "tags.njk" %}
     </div>
     {% if post.data.title %}
-    <p class="article-title">
-        <a class="article-title" href="{{ post.url | url }}">{{ post.data.title or title }}</a>
-    </p>
+    <a class="article-title" href="{{ post.url | url }}">
+        <span>{{ post.data.title or title }}</span>
+    </a>
     {% else %}
     <h1 class="article-title">{{ post.data.title or title }}</h1>
     {% endif %}

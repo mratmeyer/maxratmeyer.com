@@ -1,9 +1,4 @@
 <nav>
-  <button class="nav-button collapsed" id="nav-button" type="button" onclick="toggleNavbar()" aria-label="Navigation Button">
-    <span class="icon-bar top-bar"></span>
-    <span class="icon-bar middle-bar"></span>
-    <span class="icon-bar bottom-bar"></span>				
-  </button>
   <ul class="nav-list" id="overlay">
     <li class="nav-item"> 
       <a href="/" class="nav-link">Home</a>
@@ -11,19 +6,8 @@
     <li class="nav-item">
       <a href="/blog/" class="nav-link">Archives</a>
     </li>
-    <li class="nav-item">
-      <a href="/about/" class="nav-link">About</a>
-    </li>
     <li class="nav-item nav-icon-item">
       <a onclick="toggleDarkMode()"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><title>Toggle dark mode</title><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" /></svg></a>
     </li>
   </ul>
 </nav>
-
-{% set js %}
-{% include "nav.js" %}
-{% endset %}
-
-<script>
-{{ js | jsmin | safe }}
-</script>

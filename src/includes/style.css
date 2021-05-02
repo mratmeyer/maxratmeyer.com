@@ -161,6 +161,12 @@ a:hover {
     text-decoration: underline;
 }
 
+@media only screen and (max-width: 400px) {
+    .hero-content {
+        flex-direction: column;
+    }
+}
+
 @media only screen and (max-width: 42em) {
     .posthero {
         font-size: 22px;

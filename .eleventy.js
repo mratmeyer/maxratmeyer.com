@@ -110,6 +110,7 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addNunjucksAsyncShortcode("Image", imageShortcode);
 
+    eleventyConfig.addPassthroughCopy("src/_headers");
     eleventyConfig.addPassthroughCopy("src/favicon.ico");
     eleventyConfig.addPassthroughCopy("src/robots.txt");
     eleventyConfig.addPassthroughCopy("src/assets/");

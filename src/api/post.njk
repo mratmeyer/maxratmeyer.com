@@ -8,6 +8,7 @@ eleventyExcludeFromCollections: true
 ---
 {
   "title": "{{ post.data.title }}",
-  "date": "{{ post.data.date }}",
+  "description": "{{ post.data.description }}",
+  "date": "{{ post.data.date | slashed }}",
   "tags": ["{{ post.data.tags }}"]
 }

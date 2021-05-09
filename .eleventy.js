@@ -50,6 +50,10 @@ module.exports = function(eleventyConfig) {
       return moment(dateIn).tz('GMT').format('YYYY');
     });
 
+    eleventyConfig.addFilter("slashed", function(dateIn) {
+      return moment(dateIn).tz('GMT').format('MM/DD/YYYY');
+    });
+
     eleventyConfig.addFilter("toISOString", function(dateIn) {
         return moment(dateIn).tz('GMT').format('YYYY-MM-DD');
     });

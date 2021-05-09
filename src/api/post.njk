@@ -1,0 +1,13 @@
+---
+pagination:
+  data: collections.posts
+  size: 1
+  alias: post
+permalink: /api/{{ post.url }}metadata.json
+eleventyExcludeFromCollections: true
+---
+{
+  "title": "{{ post.data.title }}",
+  "date": "{{ post.data.date }}",
+  "tags": ["{{ post.data.tags }}"]
+}

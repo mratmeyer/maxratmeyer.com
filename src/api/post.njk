@@ -10,5 +10,5 @@ eleventyExcludeFromCollections: true
   "title": "{{ post.data.title }}",
   "description": "{{ post.data.description }}",
   "date": "{{ post.data.date | slashed }}",
-  "tags": ["{{ post.data.tags }}"]
+  "tags": ["{%- for tag in post.data.tags %}{% if (tag != "posts") %}{{ tag }}{% if (post.data.tags.length - 1 !== post.data.tags.indexOf(tag)) %},{% endif %}{% endif %}{%- endfor %}"]
 }

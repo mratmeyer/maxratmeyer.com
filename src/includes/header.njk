@@ -5,12 +5,20 @@
     <meta name="robots" content="noindex">
     {% endif %}
 
-    {% if title == "Max Ratmeyer's Blog" %}
+    {% if title == "Max Ratmeyer's Site" %}
     <title>{{ renderData.title or title or metadata.title }}</title>
     {% else %}
-    <title>{{ renderData.title or title or metadata.title }} - Max Ratmeyer's Blog</title>
+    <title>{{ renderData.title or title or metadata.title }} - Max Ratmeyer</title>
     {% endif %}
     <meta name="description" content="{{ renderData.description or description or metadata.description }}">
+
+    <meta property="og:title" content="{{ renderData.title or title or metadata.title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.maxratmeyer.com{{ page.url | url }}" />
+    {% if layout == "post" %}
+    {% set opengraphPath %}{{ (page.url.slice(0, -1) + '.png') }}{% endset %}
+    <meta property="og:image" content="https://opengraph.maxnet.work{{ opengraphPath }}" />
+    {% endif %}
 
     <link rel="preload" href="{{ config.path }}fonts/inter-v2-latin-400-600-700.woff2" as="font" type="font/woff2" crossorigin>
 
@@ -37,7 +45,6 @@
 
     <link rel="alternate" type="application/rss+xml" title="Max Ratmeyer's Blog" href="/feed.xml">
 
-    {% set absoluteUrl %}{{ page.url | url }}{% endset %}
-    <link rel="canonical" href="https://www.maxratmeyer.com{{ absoluteUrl }}">
+    <link rel="canonical" href="https://www.maxratmeyer.com{{ page.url | url }}">
     
 </head>

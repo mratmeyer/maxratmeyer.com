@@ -1,9 +1,9 @@
 {
   "name": "maxratmeyer.com",
-  "version": "3.0.0",
+  "version": "3.5.0",
   "description": "Personal blog built on Eleventy.",
   "scripts": {
-    "build": "ANALYTICS=true eleventy",
+    "build": "ANALYTICS=true MINIFYHTML=true eleventy",
     "watch": "eleventy --watch",
     "serve": "eleventy --serve",
     "debug": "DEBUG=* eleventy"

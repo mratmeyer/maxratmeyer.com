@@ -1,0 +1,32 @@
+---
+title: Blog
+layout: base
+permalink: "/blog/"
+description: Archives from Max Ratmeyer's Blog
+---
+<div class="page-header">
+    <h1 class="page-title">{{ title }}</h1>
+</div>
+
+{%- for post in collections.posts | reverse -%}
+<div class="post-excerpt">
+    <div class="article-details">
+        <div class="article-header">
+            <div class="article-details" title="{{ (post.data.date or post.date or date) }}">
+                <span class="date md">{{ (post.data.date or post.date or date) | monthDay }}</span>
+                <span class="date year">{{ (post.data.date or post.date or date) | year }}</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="article-preview">
+        <a class="article-title" href="{{ post.url | url }}">
+            <span>{{ post.data.title or title }}</span>
+        </a>
+
+        {% include "tags.njk" %}
+
+        <p class="article-description">{{ post.data.description or description }}</p>
+    </div>
+</div>
+{%- endfor -%}

@@ -42,26 +42,36 @@ module.exports = function(eleventyConfig) {
         return moment(dateIn).tz('GMT').format('MMM DD, YYYY');
     });
 
+    eleventyConfig.addFilter("monthDay", function(dateIn) {
+      return moment(dateIn).tz('GMT').format('MMM DD');
+    });
+
+    eleventyConfig.addFilter("year", function(dateIn) {
+      return moment(dateIn).tz('GMT').format('YYYY');
+    });
+
     eleventyConfig.addFilter("toISOString", function(dateIn) {
         return moment(dateIn).tz('GMT').format('YYYY-MM-DD');
     });
 
-    // Minify HTML
-    eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-      if(outputPath.endsWith(".html") ) {
-        let minified = htmlmin.minify(content, {
-          useShortDoctype: true,
-          removeComments: true,
-          ignoreCustomComments: [
-            /^\s+View/
-          ],
-          collapseWhitespace: true
-        });
+    if(config.minifyHTML == "true") {
+      // Minify HTML
+      eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+        if(outputPath.endsWith(".html") ) {
+          let minified = htmlmin.minify(content, {
+            useShortDoctype: true,
+            removeComments: true,
+            ignoreCustomComments: [
+              /^\s+View/
+            ],
+            collapseWhitespace: true
+          });
 
-        return minified;
-      }
-      return content;
-    });
+          return minified;
+        }
+        return content;
+      });
+    }
 
     // Minify CSS
     eleventyConfig.addFilter("cssmin", function(code) {

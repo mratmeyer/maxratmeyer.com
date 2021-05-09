@@ -1,5 +1,5 @@
 ---
-title: Max Ratmeyer's Blog
+title: Max Ratmeyer's Site
 layout: base
 permalink: /
 description: A high schooler's perspective on technology.
@@ -8,23 +8,40 @@ description: A high schooler's perspective on technology.
 <div class="hero-content">
     <img src="{{config.imagePath}}profiles/portrait-144x144-full.jpg" width="72" height="72" loading="lazy" class="portrait" alt="Portrait Headshot"/>
     <div class="hero-text">
-        <h1 class="hero">Max Ratmeyer's Blog</h1>
+        <h1 class="hero">Max Ratmeyer's Site</h1>
         <p class="posthero">Yo! I'm Max Ratmeyer and I'm an incoming computer science major at the <a href="https://www.uga.edu/">University of Georgia</a>.</p>
         <p class="posthero">This blog contains writeups on various projects I do and technical topics I come across. I'm particularly interested in cybersecurity, internet privacy, and web development.</p>
         <p class="posthero">If you're interested in connecting with me, you can find me on <a href="https://www.linkedin.com/in/mratmeyer/">LinkedIn</a>, <a href="https://github.com/mratmeyer/">GitHub</a> or <a href="mailto:hello@maxratmeyer.com">reach out via email</a>.</p>
     </div>
 </div>
+
+<h2 class="subheader">Latest blog posts:</h2>
+
 <div class="post-excerpts">
     {%- for post in collections.posts | reverse -%}
-        {% if loop.index0 < 6 %}    
+        {% if loop.index0 < 3 %}    
         <div class="post-excerpt">
-            {% include "post-header.njk" %}
-            <div class="article-content">
-                {% excerpt post %}
+            <div class="article-details">
+                <div class="article-header">
+                    <div class="article-details" title="{{ (post.data.date or post.date or date) }}">
+                        <span class="date md">{{ (post.data.date or post.date or date) | monthDay }} {{ (post.data.date or post.date or date) | year }}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="article-preview">
+                <a class="article-title" href="{{ post.url | url }}">
+                    <span>{{ post.data.title or title }}</span>
+                </a>
+
+                {% include "tags.njk" %}
+
+                <p class="article-description">{{ post.data.description or description }}</p>
             </div>
         </div>
         {% endif %}
     {%- endfor -%}
+    
     <div class="go-to-archives">
         <a href="/blog/">Go to Archives ➔</a>
     </div>

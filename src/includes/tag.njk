@@ -1,5 +1,13 @@
-{% if (tag != "posts") %}    
-<a class="tag tag-link" href="/tags/{{ tag }}/">
-    <span class="tags">{{ tag }}</span>
+{% if (tag != "posts") %}   
+{% if post.data.title %}
+{# Post is not on a post page #}
+<a class="tag tag-s tag-link" href="/tags/{{ tag }}/">
+    <span class="tags tags-s">{{ tag }}</span>
 </a>
+{% else %}
+{# Post is on a post page #}
+<a class="tag tag-l tag-link" href="/tags/{{ tag }}/">
+    <span class="tags tags-l">{{ tag }}</span>
+</a>
+{% endif %} 
 {% endif %}

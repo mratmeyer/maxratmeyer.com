@@ -171,7 +171,7 @@ a:hover {
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 650px) {
     .hero-content {
         flex-direction: column;
     }
@@ -304,16 +304,16 @@ a:hover {
     .article-details {
         margin-right: 1rem;
     }
+    .date {
+        margin-bottom: 7px;
+    }
 }
 
-@media only screen and (min-width: 42em) {
+@media only screen and (min-width: 650px) {
     .article-details {
         margin-right: 22px;
         width: 72px;
     }
-}
-
-@media only screen and (min-width: 42em) {
     .date-separator {
         display: none;
     }

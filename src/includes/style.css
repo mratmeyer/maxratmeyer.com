@@ -243,12 +243,9 @@ a:hover {
 }
 
 .date {
-    display: block;
     font-weight: 600;
     line-height: 120%;
     font-size: 20px;
-    margin-bottom: 5px;
-    text-align: right;
     color: var(--shade-2);
 }
 
@@ -305,7 +302,6 @@ a:hover {
 
 @media only screen and (max-width: 42em) {
     .article-details {
-        float: left;
         margin-right: 1rem;
     }
 }
@@ -314,6 +310,15 @@ a:hover {
     .article-details {
         margin-right: 22px;
         width: 72px;
+    }
+}
+
+@media only screen and (min-width: 42em) {
+    .date-separator {
+        display: none;
+    }
+    .date {
+        float: right;
     }
 }
 

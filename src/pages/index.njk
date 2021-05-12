@@ -23,9 +23,7 @@ description: A high schooler's perspective on technology.
         <div class="post-excerpt">
             <div class="article-details">
                 <div class="article-header">
-                    <div class="article-details" title="{{ (post.data.date or post.date or date) }}">
-                        <span class="date">{{ (post.data.date or post.date or date) | monthDay }}</span><span class="date date-separator">, </span><span class="date">{{ (post.data.date or post.date or date) | year }}</span>
-                    </div>
+                    {% include "post-date.njk" %}
                 </div>
             </div>
             

@@ -19,10 +19,7 @@ eleventyExcludeFromCollections: true
 <div class="post-excerpt">
   <div class="article-details">
     <div class="article-header">
-      <div class="article-details" title="{{ (post.data.date or post.date or date) }}">
-        <span class="date md">{{ (post.data.date or post.date or date) | monthDay }}</span>
-        <span class="date year">{{ (post.data.date or post.date or date) | year }}</span>
-      </div>
+      {% include "post-date.njk" %}
     </div>
   </div>
   

@@ -47,18 +47,6 @@ module.exports = function(eleventyConfig) {
         return dayjs(dateIn).tz('GMT').format('MMM DD, YYYY');
     });
 
-    eleventyConfig.addFilter("monthDay", function(dateIn) {
-      return dayjs(dateIn).tz('GMT').format('MMM DD');
-    });
-
-    eleventyConfig.addFilter("year", function(dateIn) {
-      return dayjs(dateIn).tz('GMT').format('YYYY');
-    });
-
-    eleventyConfig.addFilter("slashed", function(dateIn) {
-      return dayjs(dateIn).tz('GMT').format('MM/DD/YYYY');
-    });
-
     eleventyConfig.addFilter("toISOString", function(dateIn) {
         return dayjs(dateIn).tz('GMT').format('YYYY-MM-DD');
     });

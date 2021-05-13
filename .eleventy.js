@@ -4,8 +4,13 @@ const config = require("./src/data/config");
 const excerpt = require('eleventy-plugin-excerpt');
 const htmlmin = require("html-minifier");
 const Image = require("@11ty/eleventy-img");
-const moment = require('moment-timezone');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+
+const dayjs = require('dayjs');
+const utc = require('dayjs/plugin/utc')
+const timezone = require('dayjs/plugin/timezone')
+dayjs.extend(utc)
+dayjs.extend(timezone)
 
 async function imageShortcode(src, alt, sizes) {
   src = "./src/assets/media/" + src;
@@ -39,23 +44,23 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPlugin(pluginRss);
 
     eleventyConfig.addFilter("dateformat", function(dateIn) {
-        return moment(dateIn).tz('GMT').format('MMM DD, YYYY');
+        return dayjs(dateIn).tz('GMT').format('MMM DD, YYYY');
     });
 
     eleventyConfig.addFilter("monthDay", function(dateIn) {
-      return moment(dateIn).tz('GMT').format('MMM DD');
+      return dayjs(dateIn).tz('GMT').format('MMM DD');
     });
 
     eleventyConfig.addFilter("year", function(dateIn) {
-      return moment(dateIn).tz('GMT').format('YYYY');
+      return dayjs(dateIn).tz('GMT').format('YYYY');
     });
 
     eleventyConfig.addFilter("slashed", function(dateIn) {
-      return moment(dateIn).tz('GMT').format('MM/DD/YYYY');
+      return dayjs(dateIn).tz('GMT').format('MM/DD/YYYY');
     });
 
     eleventyConfig.addFilter("toISOString", function(dateIn) {
-        return moment(dateIn).tz('GMT').format('YYYY-MM-DD');
+        return dayjs(dateIn).tz('GMT').format('YYYY-MM-DD');
     });
 
     if(config.minifyHTML == "true") {

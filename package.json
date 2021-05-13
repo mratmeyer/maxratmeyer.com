@@ -18,9 +18,9 @@
     "@11ty/eleventy-img": "^0.7.8",
     "@11ty/eleventy-plugin-rss": "^1.1.1",
     "clean-css": "^5.1.2",
+    "dayjs": "^1.10.4",
     "eleventy-plugin-excerpt": "^1.1.2",
     "html-minifier": "^4.0.0",
-    "moment-timezone": "^0.5.33",
     "terser": "^5.7.0"
   }
 }

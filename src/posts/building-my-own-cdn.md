@@ -21,7 +21,7 @@ My CDN consisted of 3 Linode servers, one in Atlanta covering the eastern U.S., 
 
 ## Results
 
-{% Image "custom-cdn-results.jpg", "Results from my custom CDN" %}
+{% Image "custom-cdn-results.jpg", "Results from my custom CDN", "100vw, 100vw" %}
 
 In my test, you can see requests from North America and Europe were pretty fast, since their were CDN nodes nearby. In Asia and Asia Pacific, since there were no nearby nodes the TTFB is much higher as it has to traverse through the internet. If I spun up a few more CDN nodes in Asia and Asia Pacific, I could get pretty solid speeds from almost everywhere in the world. Of course, that's still nowhere near Cloudflare or CloudFront's datacenter amount, but for a static site this is already pretty overkill.
 

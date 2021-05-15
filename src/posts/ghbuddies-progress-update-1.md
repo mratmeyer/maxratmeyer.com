@@ -12,11 +12,11 @@ The idea behind GHBuddies is simple, you open the app, put in your current locat
 
 Once we had a basic idea of what we wanted to do, we were planning on building a server less web app using Firebase and Twilio. Firebase would handle the web app hosting and cloud functions, and Twilio would send an SMS message to the user once they had been matched. At this point we had maybe two and a half weeks to complete this project, and to try to roll it out to the entire GHP. We built the web app pretty quickly using HTML and Bootstrap, and then we integrated the web app with Firebase by adding the backend Javascript to call the cloud functions.
 
-{% Image "ghbuddies-web-screenshot.jpg", "Original GHBuddies Web App" %}
+{% Image "ghbuddies-web-screenshot.jpg", "Original GHBuddies Web App", "100vw, 100vw" %}
 
 Once we got a prototype of cloud functions set up, it was functional but we ran into a problem. Every time a user would submit their information into the system, once it matched them it would duplicate and send the messages twice. At this point we had maybe a little more than a week left in the program, so we were scrambling to get it working. After countless hours of debugging, we thought we would have a solution and then a few minutes later it would break again.
 
-{% Image "ghbuddies-notification-screenshot.jpg", "GHBuddies Notification" %}
+{% Image "ghbuddies-notification-screenshot.jpg", "GHBuddies Notification", "100vw, 100vw" %}
 
 When we got GHBuddies to a point where it was stable enough, we announced it to the GHP group chat and got ready for release night. Of course an hour before we were planning on opening it, Google Cloud went down so that made the app unusable for a good while. :( Anyways, at that point we decided this is a long term project, and we would have to make it into a more stable full fledged app and release it at the next GHP if we wanted it to go anywhere. So, that bring's me to my progress so far.
 
@@ -26,10 +26,10 @@ This has been my first iOS app, and while there's been a pretty big learning cur
 
 This screenshot shows our login screen. When the user first downloads the app, they will be presented with this screen. There is also a registration button that takes them through a registration process, but that is currently disabled while I update it. Once the user puts their information in this screen, they will be taken to the home page.
 
-{% Image "ghbuddies-ios-1.jpg", "GHBuddies Login Screen" %}
+{% Image "ghbuddies-ios-1.jpg", "GHBuddies Login Screen", "100vw, 100vw" %}
 
 And this is the home page. Here the user taps in their starting location and ending location and presses the request button in order to get matched with a buddy.
 
-{% Image "ghbuddies-ios-2.jpg", "Beta GHBuddies Home Screen" %}
+{% Image "ghbuddies-ios-2.jpg", "Beta GHBuddies Home Screen", "100vw, 100vw" %}
 
 The good news is now that school is out for a while I have more time to work on this project and see where we can take it. However, by the same token, depending on how the coronavirus pandemic plays out, GHP may be cancelled this summer and we won't be able to release it this year.

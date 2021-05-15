@@ -22,7 +22,7 @@ After brainstorming for a few hours, we had the basis of an idea. What if we cou
 
 Study Generator is a web app we built where a user can insert any text, think an article to study or a Wikipedia entry, and the app will generate flash cards. This could be a quick way to check comprehension of an article, or make sure you understand all of the concepts in a PowerPoint. In the backend, Google's Natural Language Processing API is running and determining which words in the text are important, and based on an algorithm, questions are generated and sent back to the client via an API.
 
-{% Image "study-generator.jpg", "Study Generator UI" %}
+{% Image "study-generator.jpg", "Study Generator UI", "100vw, 100vw" %}
 
 We also added a feature where if a user wants to print their flashcards to go, they could press the print button and a formatted PDF will be generated to be printed.
 

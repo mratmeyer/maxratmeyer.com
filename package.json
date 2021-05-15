@@ -15,7 +15,7 @@
   "author": "Max Ratmeyer",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "@11ty/eleventy-img": "^0.7.8",
+    "@11ty/eleventy-img": "^0.9.0",
     "@11ty/eleventy-plugin-rss": "^1.1.1",
     "clean-css": "^5.1.2",
     "dayjs": "^1.10.4",

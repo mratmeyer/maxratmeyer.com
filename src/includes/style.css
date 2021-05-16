@@ -152,7 +152,7 @@ a:hover {
 
 .post-excerpt {
     display: flex;
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 25px 0px;
 }
 
 .go-to-archives {
@@ -216,6 +216,7 @@ a:hover {
     font-size: 44px;
     margin: 0px 0px 20px 0px;
     font-weight: 700;
+    line-height: 120%;
     text-decoration: none;
     overflow-wrap: break-word;
 }
@@ -312,7 +313,7 @@ a:hover {
 @media only screen and (min-width: 650px) {
     .article-details {
         margin-right: 22px;
-        padding-top: 13px;
+        padding-top: 17px;
         width: 72px;
     }
     .date-separator {
@@ -320,6 +321,7 @@ a:hover {
     }
     .date {
         float: right;
+        margin-bottom: 2px;
     }
 }
 
@@ -426,7 +428,7 @@ a:hover {
 }
 
 .tag-s {
-    padding: 10px 8px 10px 8px;
+    padding: 12px 10px 12px 10px;
 }
 
 .tag-l {
@@ -446,28 +448,24 @@ a:hover {
 }
 
 .tags-s {
-    font-size: 10px;
+    font-size: 14px;
 }
 
 .tags-l {
     font-size: 20px;
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 650px) {
     .tag-container {
         margin-top: 7px;
     }
 }
 
-/* @media only screen and (min-width: 520px) {
-    .tag {
-        position: relative;
-    }
+@media only screen and (min-width: 650px) {
     .tag-container {
-        margin-left: 15px;
-        float: left;
+        margin-bottom: 8px;
     }
-} */
+}
 
 /*
     Footer

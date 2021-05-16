@@ -24,11 +24,11 @@ eleventyExcludeFromCollections: true
   </div>
   
   <div class="article-preview">
+    {% include "tags.njk" %}
+    
     <a class="article-title" href="{{ post.url | url }}">
       <span>{{ post.data.title or title }}</span>
     </a>
-
-    {% include "tags.njk" %}
 
     <p class="article-description">{{ post.data.description or description }}</p>
   </div>

@@ -16,21 +16,5 @@ eleventyExcludeFromCollections: true
 
 {% set taglist = collections[ tag ] %}
 {% for post in taglist | reverse %}
-<div class="post-excerpt">
-  <div class="article-details">
-    <div class="article-header">
-      {% include "post-date.njk" %}
-    </div>
-  </div>
-  
-  <div class="article-preview">
-    {% include "tags.njk" %}
-    
-    <a class="article-title" href="{{ post.url | url }}">
-      <span>{{ post.data.title or title }}</span>
-    </a>
-
-    <p class="article-description">{{ post.data.description or description }}</p>
-  </div>
-</div>
+{% include "post-preview.njk" %}
 {% endfor %}

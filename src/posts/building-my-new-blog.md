@@ -7,7 +7,7 @@ tags:
 ---
 For a while now, I've wanted to build my own website and blog. The past few years, I've had a generic HTML5Up template up on my domain saying "Coming soon," which has been an ongoing joke to my friends because it has said the same thing for years.
 
-{% Image "maxratmeyer-com-2018.jpg", "My original website according to archive.org", "100vw, 100vw"  %}
+{% Image "maxratmeyer-com-2018.jpg", "My original website according to archive.org"  %}
 
 Before the coronavirus pandemic, basically all of my time was spent doing schoolwork or school related activites. One silver lining for me during this pandemic is that I've had a lot more time to explore on my own and do whatever I wanted because everything else was on hold. 
 
@@ -21,7 +21,7 @@ The first thing I checked out was my GitHub Student Starter Pack subscription to
 
 Bootstrap Studio seemed to fit the bill for me as it was using Bootstrap which I was planning on using for the layout of the site anyways, so I thought it may help. I downloaded it and set up a basic site, but when I used it the elements seemed too cookie cutter to me. I decided to rebuild what I had created in Bootstrap studio but manually through Visual Studio Code. Once I had done that, I had the first iteration my website. It was functional, but it looked really plain.
 
-{% Image "maxratmeyer-com-first-iteration.jpg", "First template design of my website", "100vw, 100vw" %}
+{% Image "maxratmeyer-com-first-iteration.jpg", "First template design of my website" %}
 
 ## Transitioning to JAMStack
 

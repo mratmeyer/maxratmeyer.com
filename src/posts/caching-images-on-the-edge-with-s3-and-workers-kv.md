@@ -23,15 +23,15 @@ In order to measure the performance of the assets worldwide, I used [KeyCDN's Pe
 
 The first test I ran was an uncached request with worker querying Amazon S3 directly.
 
-{% Image "workers-fetch-origin.jpg", "Performance test with Worker fetching straight from S3.", "100vw, 100vw" %}
+{% Image "workers-fetch-origin.jpg", "Performance test with Worker fetching straight from S3." %}
 
 When we fetch the files directly from Amazon, you can see in the TTFB that in the United States the content gets transfered quickly, but in almost every other location it takes anywhere from half a second to 1.5 seconds in order to start delivering content. This is because my Amazon S3 bucket is located only in us-east-1, Amazon's North Virginia location. Any other region has to go through the open internet before it is delivered to the user.
 
-{% Image "workers-fetch-kv.jpg", "Performance test with Worker fetching from Workers KV", "100vw, 100vw" %}
+{% Image "workers-fetch-kv.jpg", "Performance test with Worker fetching from Workers KV" %}
 
 With Workers KV deployed, the first request in Germany has a long TTFB with about 800ms, but almost all of the sequential requests are around the 200-300ms mark. This is because after the first Worker fetches the asset from S3 in Germany, it not only caches it locally at Cloudflare's Germany colocation, but it also uploads the file to Workers KV, which immediately pushes it to all of Cloudflare's other data centers worldwide. When the sequential requests are sent, instead of being fetched from the origin, they are being fetched from Workers KV, so latency is reduced significantly.
 
-{% Image "workers-fetch-node.jpg", "Performance test with Worker fetching from node cache", "100vw, 100vw" %}
+{% Image "workers-fetch-node.jpg", "Performance test with Worker fetching from node cache" %}
 
 Once the image has been cached not only on Workers KV but also on the local Cloudflare servers, the TTFB is halved yet again. This is super fast, but if the files aren't requested regularly by users, it will revert back to the speeds from fetching directly from Workers KV, which is still pretty fast.
 
@@ -45,11 +45,11 @@ To use the Cloudflare dashboard, first go to the Workers page and create a new W
 
 Next, you need to assign the KV Namespace binding. At the top of the screen, click KV, and create a new namespace. Once you've done that, go back to the Worker's settings, and create a binding for the variables 'ASSETS' to whatever KV space name you just created. Once you're done, your Settings page should look like this.
 
-{% Image "workers-settings.jpg", "Example Workers Settings Page", "100vw, 100vw" %}
+{% Image "workers-settings.jpg", "Example Workers Settings Page" %}
 
 Once you've set up the Worker, all you need to do is go into your domain's settings and assign the Workers to a route. For example, mine looks like this.
 
-{% Image "workers-domain-settings.jpg", "Example Workers Domain Settings Page", "100vw, 100vw" %}
+{% Image "workers-domain-settings.jpg", "Example Workers Domain Settings Page" %}
 
 ## Conclusion
 

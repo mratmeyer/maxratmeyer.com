@@ -7,7 +7,7 @@ tags:
 ---
 DNS records are a pain to manage. Each provider has its own UI, it's hard to make changes to multiple domains at once, and you can't easily revert changes. A few months ago, I was researching some DNS management tools and I came across DNSControl. DNSControl stores all of your DNS records in a single JavaScript file and saves it in git, and lets you deploy your records to production in one command.
 
-{% Image "dnscontrol-records.jpg", "DNSControl Records for one of my domains", "100vw, 100vw" %}
+{% Image "dnscontrol-records.jpg", "DNSControl Records for one of my domains" %}
 
 ## Setting it up
 
@@ -17,7 +17,7 @@ Setting up DNSControl is pretty straightforward. Once [you've installed DNSContr
 
 Since the DNS records are defined in JavaScript, we can do neat little tricks that makes it easier to manage the records for our domains. For example, say you have multiple domains for which you want to have the same records for, you can set up a loop in order to set the same DNS records for each of your domains instead of copying and pasting the records all day.
 
-{% Image "dnscontrol-repeat-records.jpg", "Using loops to repeat records for multiple domains", "100vw, 100vw" %}
+{% Image "dnscontrol-repeat-records.jpg", "Using loops to repeat records for multiple domains" %}
 
 If you have multiple servers or change the server IPs regularly, you can also assign different IP addresses to different variables and reference those from within the domains. Since this is JavaScript and code, almost any setup you want could work.
 

@@ -19,25 +19,9 @@ description: Max Ratmeyer's Personal Site.
 
 <div class="post-excerpts">
     {%- for post in collections.posts | reverse -%}
-        {% if loop.index0 < 3 %}    
-        <div class="post-excerpt">
-            <div class="article-details">
-                <div class="article-header">
-                    {% include "post-date.njk" %}
-                </div>
-            </div>
-            
-            <div class="article-preview">
-                {% include "tags.njk" %}
-                
-                <a class="article-title" href="{{ post.url | url }}">
-                    <span>{{ post.data.title or title }}</span>
-                </a>
-
-                <p class="article-description">{{ post.data.description or description }}</p>
-            </div>
-        </div>
-        {% endif %}
+    {% if loop.index0 < 3 %}    
+    {% include "post-preview.njk" %}
+    {% endif %}
     {%- endfor -%}
     
     <div class="go-to-archives">

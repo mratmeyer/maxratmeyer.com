@@ -14,6 +14,7 @@ dayjs.extend(timezone)
 
 async function imageShortcode(src, alt, sizes) {
   src = "./src/assets/media/" + src;
+  sizes = "100vw, 100vw";
   
   let metadata = await Image(src, {
     widths: [720, 1440],

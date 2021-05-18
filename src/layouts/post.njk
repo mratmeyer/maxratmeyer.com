@@ -3,12 +3,12 @@ layout: base
 ---
 <div class="article-header" title="{{ (post.data.date or post.date or date) }}">
     <span class="date-full">{{ (post.data.date or post.date or date) | dateformat }}</span>
+
+    {% include "tags.njk" %}
 </div>
 
 <div class="article-preview">
     <h1 class="page-title">{{ post.data.title or title }}</h1>
-
-    {% include "tags.njk" %}
 </div>
 
 <div class="article-content">
@@ -23,4 +23,4 @@ layout: base
 </a>
 {% endif %}
 
-{% include "related-posts.njk" %}
+{# {% include "related-posts.njk" %} #}

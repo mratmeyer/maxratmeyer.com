@@ -34,7 +34,7 @@ Once the image has been generated, it is then sent back as a PNG using Express.j
 
 Originally, I was thinking I would drop the code in a AWS Lambda or Netlify Function and call it a day. However, because node-canvas uses some external dependencies that are tricky to deal with, I opted to stick with Docker containers. Especially in a case like this, having one docker image that I know has all of the right dependencies installed solves a lot of issues.
 
-When I was setting up the Docker container, I ran into an issue where sometimes the Docker container would deploy and run and sometimes it wouldn't. I later figured out this was because the node dependencies I was using on my Mac were being copied over to the new Docker container and the server needed different dependencies. Presumably because I'm using an ARM device now and the server was using x86, this caused compatibility issues. I had to create a Dockerignore file in order to tell Docker to not copy of my local dependencies to to the Docker container.
+When I was setting up the Docker container, I ran into an issue where sometimes the Docker container would deploy and run and sometimes it wouldn't. I later figured out this was because the node dependencies I was using on my Mac were being copied over to the new Docker container and the server needed different dependencies. Presumably because I'm using an ARM device now and the server was using x86, this caused compatibility issues. I had to create a Dockerignore file in order to tell Docker to not copy my local dependencies to to the Docker container.
 
 ## Wrap-up
 

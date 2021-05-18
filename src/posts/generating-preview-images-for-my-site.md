@@ -38,4 +38,4 @@ When I was setting up the Docker container, I ran into an issue where sometimes 
 
 ## Wrap-up
 
-All in all this project was pretty fun to work on and it looks pretty cool! You should be able to send a link to one of my posts in iMessage or Instagram in order to see it, or you can look for the *og:image* meta tag in the source code. If you're interested in checking out the source code for this project click on the View Repository button below.
+All in all this project was pretty fun to work on and it looks cool! You should be able to send a link to one of my posts in iMessage or Instagram in order to see it, or you can look for the *og:image* meta tag in the source code. If you're interested in checking out the source code for this project click on the View Repository button below.

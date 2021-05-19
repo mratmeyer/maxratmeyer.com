@@ -16,7 +16,7 @@ As you may have noticed throughout my site, I like minimalist design. I wanted m
 
 ## Tech stack
 
-When I was researching possible ways to generate the preview images, a common method I found was using CSS and Puppeteer. Essentially, you make a miniature website using HTML and style it with CSS, and using Puppeteer(a Node.js program that lets you run a programmable version of Chrome) you would start up a virtual browser and take a screenshot of this. This would work but because it involves Puppeteer and the Chrome rendering engine it would be more heavy than it needs to be and theoretically slower because of the browser start time.
+When I was researching possible ways to generate the preview images, a common method I found was using CSS and Puppeteer. Essentially, you make a miniature website using HTML and style it with CSS, and using Puppeteer(a Node.js program that lets you run a programmable version of Chrome) you would start up a virtual browser and take a screenshot of it. This would work but because it involves Puppeteer and the Chrome rendering engine it would be more heavy than it needs to be and theoretically slower because of the browser start time.
 
 Another method I found was using node-canvas, a Node.js implementation of the Canvas API. The Canvas API uses JavaScript in order to draw text and objects on a blank canvas. This should be faster because its not having to fire up an instance of a browser just to draw a single picture.
 

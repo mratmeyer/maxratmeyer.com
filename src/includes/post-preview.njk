@@ -12,6 +12,6 @@
             <span>{{ post.data.title or title }}</span>
         </a>
 
-        <p class="article-description">{{ post.data.description or description }}</p>
+        <p class="article-description">{{ post.data.description or description }} <a href="{{ post.url | url }}">Read post</a></p>
     </div>
 </div>

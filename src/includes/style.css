@@ -184,9 +184,6 @@ a:hover {
 }
 
 @media only screen and (max-width: 42em) {
-    .posthero {
-        font-size: 22px;
-    }
     .portrait {
         margin-right: 1rem;
     }
@@ -196,9 +193,6 @@ a:hover {
 }
 
 @media only screen and (min-width: 42em) {
-    .posthero {
-        font-size: 24px;
-    }
     .portrait {
         margin-right: 22px;
     }
